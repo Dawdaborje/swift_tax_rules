@@ -1,0 +1,4 @@
+// Income tax for one pay period, by progressive bands.
+// `taxable` is the pay after pre-tax deductions for the period; `periods_per_year` is 12 for monthly pay.
+// Illustrative figures to show the format. They are not any country's law.
+bracket(taxable * periods_per_year, brackets) / periods_per_year
