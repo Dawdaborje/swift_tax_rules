@@ -4,8 +4,8 @@
   "kind": "social_security",
   "currency": "NGN",
   "valid_from": "2014-07-01",
-  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: Pension Reform Act 2014, employee contribution 8% of monthly emoluments (basic, housing, transport) (https://www.pencom.gov.ng). Employer pays at least 10%. The input is the sum of basic, housing and transport.",
-  "verified": false,
+  "source": "Pension Reform Act 2014 (Act No. 4 of 2014), section 4(1), gazetted copy read 2026-11-05 (http://ngfrepository.org.ng:8080/jspui/bitstream/123456789/968/1/PENSION%20REFORM%20ACT%202014%20-%20GAZETTED%20COPY.pdf, National Assembly repository; scanned pages): the contribution is a minimum of 10% by the employer and a minimum of 8% by the employee, on monthly emoluments; the rates may be revised upwards by agreement (4(2)). Section 120: monthly emoluments are the total emoluments defined in the contract of employment, and not less than basic salary plus housing allowance plus transport allowance. The 8% here is the statutory minimum; the input is the sum of basic, housing and transport, or more if the contract says so. Employer share is a separate cost. The employee's contribution is deductible for income tax under section 30(2)(a)(iii) of the Nigeria Tax Act 2025.",
+  "verified": true,
   "inputs": [
     "pensionable"
   ],

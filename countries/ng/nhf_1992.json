@@ -4,7 +4,7 @@
   "kind": "levy",
   "currency": "NGN",
   "valid_from": "1992-01-01",
-  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: National Housing Fund, 2.5% of basic salary (https://www.fmbn.gov.ng). Applies to employees earning above the minimum wage.",
+  "source": "UNCONFIRMED. On 2026-11-05 the FMBN copy of the Act could not be opened. Secondary sources (Mondaq, Templars, PaySpace) say the 1992 Act set 2.5% of basic monthly salary and that section 45 of the Business Facilitation (Miscellaneous Provisions) Act 2022 changed the wording to \"may contribute 2.5% of monthly income\" for private-sector employees, which some read as making it voluntary there; public-sector contribution stays compulsory. Read the amended Act before use. Rate as originally written: National Housing Fund, 2.5% of basic salary (https://www.fmbn.gov.ng). Applies to employees earning above the minimum wage.",
   "verified": false,
   "inputs": [
     "basic"
