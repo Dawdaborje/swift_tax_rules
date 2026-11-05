@@ -1,0 +1,76 @@
+{
+  "id": "bd.paye.2025",
+  "country": "bd",
+  "kind": "income_tax",
+  "currency": "BDT",
+  "valid_from": "2024-07-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: Bangladesh NBR individual slabs, assessment year 2025-26 (https://nbr.gov.bd). Thresholds differ for women, senior citizens and disabled taxpayers; minimum tax and investment rebate are not modelled.",
+  "verified": false,
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
+  "constants": {
+    "brackets": [
+      [
+        350000,
+        0
+      ],
+      [
+        450000,
+        0.05
+      ],
+      [
+        750000,
+        0.1
+      ],
+      [
+        1150000,
+        0.15
+      ],
+      [
+        1650000,
+        0.2
+      ],
+      [
+        null,
+        0.25
+      ]
+    ],
+    "relief_annual": 0
+  },
+  "tests": [
+    {
+      "name": "monthly 20000",
+      "inputs": {
+        "taxable": 20000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 50000",
+      "inputs": {
+        "taxable": 50000,
+        "periods_per_year": 12
+      },
+      "expect": "1666.67"
+    },
+    {
+      "name": "monthly 100000",
+      "inputs": {
+        "taxable": 100000,
+        "periods_per_year": 12
+      },
+      "expect": "8750.00"
+    },
+    {
+      "name": "monthly 300000",
+      "inputs": {
+        "taxable": 300000,
+        "periods_per_year": 12
+      },
+      "expect": "56875.00"
+    }
+  ]
+}

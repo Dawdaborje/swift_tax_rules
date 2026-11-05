@@ -1,0 +1,76 @@
+{
+  "id": "pk.paye.2026",
+  "country": "pk",
+  "kind": "income_tax",
+  "currency": "PKR",
+  "valid_from": "2025-07-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: Pakistan FBR salaried individual slabs, tax year 2026 (https://www.fbr.gov.pk). The 9% surcharge for taxable income above 10 million is not modelled.",
+  "verified": false,
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
+  "constants": {
+    "brackets": [
+      [
+        600000,
+        0
+      ],
+      [
+        1200000,
+        0.01
+      ],
+      [
+        2200000,
+        0.11
+      ],
+      [
+        3200000,
+        0.23
+      ],
+      [
+        4100000,
+        0.3
+      ],
+      [
+        null,
+        0.35
+      ]
+    ],
+    "relief_annual": 0
+  },
+  "tests": [
+    {
+      "name": "monthly 40000",
+      "inputs": {
+        "taxable": 40000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 100000",
+      "inputs": {
+        "taxable": 100000,
+        "periods_per_year": 12
+      },
+      "expect": "500.00"
+    },
+    {
+      "name": "monthly 250000",
+      "inputs": {
+        "taxable": 250000,
+        "periods_per_year": 12
+      },
+      "expect": "25000.00"
+    },
+    {
+      "name": "monthly 600000",
+      "inputs": {
+        "taxable": 600000,
+        "periods_per_year": 12
+      },
+      "expect": "141750.00"
+    }
+  ]
+}

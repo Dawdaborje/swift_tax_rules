@@ -1,0 +1,2 @@
+// Kenya NSSF employee contribution for one period: a share of pensionable pay up to the upper earnings limit (tiers I and II together).
+min(pensionable, upper_earnings_limit) * rate

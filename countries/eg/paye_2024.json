@@ -1,0 +1,80 @@
+{
+  "id": "eg.paye.2024",
+  "country": "eg",
+  "kind": "income_tax",
+  "currency": "EGP",
+  "valid_from": "2024-07-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: Egypt unified income tax law, annual salary bands (https://www.eta.gov.eg). Personal exemption of 20,000 a year is subtracted after tax as a relief here, but in law it is deducted from income first: check the order. Social insurance (11% employee) is a separate rule not yet written.",
+  "verified": false,
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
+  "constants": {
+    "brackets": [
+      [
+        40000,
+        0
+      ],
+      [
+        55000,
+        0.1
+      ],
+      [
+        70000,
+        0.15
+      ],
+      [
+        200000,
+        0.2
+      ],
+      [
+        400000,
+        0.225
+      ],
+      [
+        1200000,
+        0.25
+      ],
+      [
+        null,
+        0.275
+      ]
+    ],
+    "relief_annual": 20000
+  },
+  "tests": [
+    {
+      "name": "monthly 3000",
+      "inputs": {
+        "taxable": 3000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 5000",
+      "inputs": {
+        "taxable": 5000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 10000",
+      "inputs": {
+        "taxable": 10000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 50000",
+      "inputs": {
+        "taxable": 50000,
+        "periods_per_year": 12
+      },
+      "expect": "8729.17"
+    }
+  ]
+}

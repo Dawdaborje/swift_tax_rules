@@ -1,0 +1,2 @@
+// Kenya Social Health Insurance Fund, employee share for one period: a share of gross pay, never below the minimum.
+max(gross * rate, minimum)

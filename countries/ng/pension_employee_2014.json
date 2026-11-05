@@ -1,0 +1,38 @@
+{
+  "id": "ng.pension_employee.2014",
+  "country": "ng",
+  "kind": "social_security",
+  "currency": "NGN",
+  "valid_from": "2014-07-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: Pension Reform Act 2014, employee contribution 8% of monthly emoluments (basic, housing, transport) (https://www.pencom.gov.ng). Employer pays at least 10%. The input is the sum of basic, housing and transport.",
+  "verified": false,
+  "inputs": [
+    "pensionable"
+  ],
+  "constants": {
+    "rate": 0.08
+  },
+  "tests": [
+    {
+      "name": "pensionable 100000",
+      "inputs": {
+        "pensionable": 100000
+      },
+      "expect": "8000.00"
+    },
+    {
+      "name": "pensionable 300000",
+      "inputs": {
+        "pensionable": 300000
+      },
+      "expect": "24000.00"
+    },
+    {
+      "name": "pensionable 1000000",
+      "inputs": {
+        "pensionable": 1000000
+      },
+      "expect": "80000.00"
+    }
+  ]
+}

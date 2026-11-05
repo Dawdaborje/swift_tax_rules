@@ -1,0 +1,3 @@
+// Kenya PAYE for one period: tax on the annualised taxable pay by band, less the annual personal relief
+// (never below zero), shared back over the periods.
+max(bracket(taxable * periods_per_year, brackets) - personal_relief_annual, 0) / periods_per_year

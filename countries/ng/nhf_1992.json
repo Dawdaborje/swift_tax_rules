@@ -1,0 +1,31 @@
+{
+  "id": "ng.nhf.1992",
+  "country": "ng",
+  "kind": "levy",
+  "currency": "NGN",
+  "valid_from": "1992-01-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: National Housing Fund, 2.5% of basic salary (https://www.fmbn.gov.ng). Applies to employees earning above the minimum wage.",
+  "verified": false,
+  "inputs": [
+    "basic"
+  ],
+  "constants": {
+    "rate": 0.025
+  },
+  "tests": [
+    {
+      "name": "basic 100000",
+      "inputs": {
+        "basic": 100000
+      },
+      "expect": "2500.00"
+    },
+    {
+      "name": "basic 300000",
+      "inputs": {
+        "basic": 300000
+      },
+      "expect": "7500.00"
+    }
+  ]
+}

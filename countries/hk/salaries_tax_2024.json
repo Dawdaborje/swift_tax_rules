@@ -1,0 +1,72 @@
+{
+  "id": "hk.salaries_tax.2024",
+  "country": "hk",
+  "kind": "income_tax",
+  "currency": "HKD",
+  "valid_from": "2024-04-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: Hong Kong salaries tax progressive rates, 2024/25 (https://www.ird.gov.hk). The relief here is the basic allowance (132,000) taken off the tax in place of off income, which is wrong in general: subtract allowances from income first, and cap at the standard rate (15% of net income, 16% above 5,000,000 on the first 5m).",
+  "verified": false,
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
+  "constants": {
+    "brackets": [
+      [
+        50000,
+        0.02
+      ],
+      [
+        100000,
+        0.06
+      ],
+      [
+        150000,
+        0.1
+      ],
+      [
+        200000,
+        0.14
+      ],
+      [
+        null,
+        0.17
+      ]
+    ],
+    "relief_annual": 132000
+  },
+  "tests": [
+    {
+      "name": "monthly 10000",
+      "inputs": {
+        "taxable": 10000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 20000",
+      "inputs": {
+        "taxable": 20000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 50000",
+      "inputs": {
+        "taxable": 50000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 120000",
+      "inputs": {
+        "taxable": 120000,
+        "periods_per_year": 12
+      },
+      "expect": "7900.00"
+    }
+  ]
+}

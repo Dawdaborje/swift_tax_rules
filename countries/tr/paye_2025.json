@@ -1,0 +1,72 @@
+{
+  "id": "tr.paye.2025",
+  "country": "tr",
+  "kind": "income_tax",
+  "currency": "TRY",
+  "valid_from": "2025-01-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: Turkey wage income tax brackets, 2025 (https://www.gib.gov.tr). Turkey taxes cumulatively through the year; this annualised form is an approximation. The minimum-wage exemption is not modelled.",
+  "verified": false,
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
+  "constants": {
+    "brackets": [
+      [
+        158000,
+        0.15
+      ],
+      [
+        330000,
+        0.2
+      ],
+      [
+        800000,
+        0.27
+      ],
+      [
+        4300000,
+        0.35
+      ],
+      [
+        null,
+        0.4
+      ]
+    ],
+    "relief_annual": 0
+  },
+  "tests": [
+    {
+      "name": "monthly 15000",
+      "inputs": {
+        "taxable": 15000,
+        "periods_per_year": 12
+      },
+      "expect": "2341.67"
+    },
+    {
+      "name": "monthly 30000",
+      "inputs": {
+        "taxable": 30000,
+        "periods_per_year": 12
+      },
+      "expect": "5516.67"
+    },
+    {
+      "name": "monthly 100000",
+      "inputs": {
+        "taxable": 100000,
+        "periods_per_year": 12
+      },
+      "expect": "27083.33"
+    },
+    {
+      "name": "monthly 500000",
+      "inputs": {
+        "taxable": 500000,
+        "periods_per_year": 12
+      },
+      "expect": "174166.67"
+    }
+  ]
+}

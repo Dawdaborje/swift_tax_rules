@@ -1,0 +1,45 @@
+{
+  "id": "ug.nssf_employee.2023",
+  "country": "ug",
+  "kind": "social_security",
+  "currency": "UGX",
+  "valid_from": "2023-07-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: NSSF Uganda employee contribution 5% of gross (https://www.nssfug.org). Employer pays 10%.",
+  "verified": false,
+  "inputs": [
+    "gross"
+  ],
+  "constants": {
+    "rate": 0.05
+  },
+  "tests": [
+    {
+      "name": "gross 3000",
+      "inputs": {
+        "gross": 3000
+      },
+      "expect": "150.00"
+    },
+    {
+      "name": "gross 10000",
+      "inputs": {
+        "gross": 10000
+      },
+      "expect": "500.00"
+    },
+    {
+      "name": "gross 50000",
+      "inputs": {
+        "gross": 50000
+      },
+      "expect": "2500.00"
+    },
+    {
+      "name": "gross 150000",
+      "inputs": {
+        "gross": 150000
+      },
+      "expect": "7500.00"
+    }
+  ]
+}

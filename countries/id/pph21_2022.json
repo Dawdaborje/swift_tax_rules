@@ -1,0 +1,72 @@
+{
+  "id": "id.pph21.2022",
+  "country": "id",
+  "kind": "income_tax",
+  "currency": "IDR",
+  "valid_from": "2022-01-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: Indonesia PPh 21 progressive rates (UU HPP) (https://www.pajak.go.id). Subtract the non-taxable income (PTKP, 54,000,000 for a single person) and occupational cost before this rule. The 2024 TER monthly method is not modelled.",
+  "verified": false,
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
+  "constants": {
+    "brackets": [
+      [
+        60000000,
+        0.05
+      ],
+      [
+        250000000,
+        0.15
+      ],
+      [
+        500000000,
+        0.25
+      ],
+      [
+        5000000000,
+        0.3
+      ],
+      [
+        null,
+        0.35
+      ]
+    ],
+    "relief_annual": 0
+  },
+  "tests": [
+    {
+      "name": "monthly 10000000",
+      "inputs": {
+        "taxable": 10000000,
+        "periods_per_year": 12
+      },
+      "expect": "1000000.00"
+    },
+    {
+      "name": "monthly 20000000",
+      "inputs": {
+        "taxable": 20000000,
+        "periods_per_year": 12
+      },
+      "expect": "2500000.00"
+    },
+    {
+      "name": "monthly 50000000",
+      "inputs": {
+        "taxable": 50000000,
+        "periods_per_year": 12
+      },
+      "expect": "10333333.33"
+    },
+    {
+      "name": "monthly 200000000",
+      "inputs": {
+        "taxable": 200000000,
+        "periods_per_year": 12
+      },
+      "expect": "55333333.33"
+    }
+  ]
+}

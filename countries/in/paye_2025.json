@@ -1,0 +1,80 @@
+{
+  "id": "in.paye.2025",
+  "country": "in",
+  "kind": "income_tax",
+  "currency": "INR",
+  "valid_from": "2025-04-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: India new tax regime slabs, FY 2025-26 (https://www.incometax.gov.in). Not modelled: the 75,000 standard deduction (take it off the taxable amount first), the section 87A rebate that makes tax nil up to 1,200,000, surcharge and 4% cess.",
+  "verified": false,
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
+  "constants": {
+    "brackets": [
+      [
+        400000,
+        0
+      ],
+      [
+        800000,
+        0.05
+      ],
+      [
+        1200000,
+        0.1
+      ],
+      [
+        1600000,
+        0.15
+      ],
+      [
+        2000000,
+        0.2
+      ],
+      [
+        2400000,
+        0.25
+      ],
+      [
+        null,
+        0.3
+      ]
+    ],
+    "relief_annual": 0
+  },
+  "tests": [
+    {
+      "name": "monthly 30000",
+      "inputs": {
+        "taxable": 30000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 60000",
+      "inputs": {
+        "taxable": 60000,
+        "periods_per_year": 12
+      },
+      "expect": "1333.33"
+    },
+    {
+      "name": "monthly 100000",
+      "inputs": {
+        "taxable": 100000,
+        "periods_per_year": 12
+      },
+      "expect": "5000.00"
+    },
+    {
+      "name": "monthly 300000",
+      "inputs": {
+        "taxable": 300000,
+        "periods_per_year": 12
+      },
+      "expect": "55000.00"
+    }
+  ]
+}

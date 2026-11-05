@@ -1,0 +1,45 @@
+{
+  "id": "gh.ssnit_employee.2024",
+  "country": "gh",
+  "kind": "social_security",
+  "currency": "GHS",
+  "valid_from": "2024-01-01",
+  "source": "UNCONFIRMED. On 2026-11-05 the SSNIT site could not be opened in full (a search snippet from ssnit.org.gh agrees on 5.5% employee, 13% employer). The ceiling on insurable earnings (a payroll vendor says 69,000 a month from January 2026, 61,000 in 2025) is only from vendors and is NOT applied here; find the official SSNIT notice. Rate as originally written: SSNIT employee contribution, 5.5% of basic salary (https://www.ssnit.org.gh). Employer share (13%) is a separate cost; the ceiling on insurable earnings is not applied.",
+  "verified": false,
+  "inputs": [
+    "basic"
+  ],
+  "constants": {
+    "rate": 0.055
+  },
+  "tests": [
+    {
+      "name": "basic 3000",
+      "inputs": {
+        "basic": 3000
+      },
+      "expect": "165.00"
+    },
+    {
+      "name": "basic 10000",
+      "inputs": {
+        "basic": 10000
+      },
+      "expect": "550.00"
+    },
+    {
+      "name": "basic 50000",
+      "inputs": {
+        "basic": 50000
+      },
+      "expect": "2750.00"
+    },
+    {
+      "name": "basic 150000",
+      "inputs": {
+        "basic": 150000
+      },
+      "expect": "8250.00"
+    }
+  ]
+}

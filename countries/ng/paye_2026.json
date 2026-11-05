@@ -1,0 +1,76 @@
+{
+  "id": "ng.paye.2026",
+  "country": "ng",
+  "kind": "income_tax",
+  "currency": "NGN",
+  "valid_from": "2026-01-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: Nigeria Tax Act 2025 personal income tax bands (first 800,000 free) (https://www.firs.gov.ng). Rent relief (20% of rent, capped at 500,000) and the pension, NHF and NHIS deductions must be taken off before this rule; the old CRA is gone under this Act. Confirm the bands and the effective date.",
+  "verified": false,
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
+  "constants": {
+    "brackets": [
+      [
+        800000,
+        0
+      ],
+      [
+        3000000,
+        0.15
+      ],
+      [
+        12000000,
+        0.18
+      ],
+      [
+        25000000,
+        0.21
+      ],
+      [
+        50000000,
+        0.23
+      ],
+      [
+        null,
+        0.25
+      ]
+    ],
+    "relief_annual": 0
+  },
+  "tests": [
+    {
+      "name": "monthly 50000",
+      "inputs": {
+        "taxable": 50000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 200000",
+      "inputs": {
+        "taxable": 200000,
+        "periods_per_year": 12
+      },
+      "expect": "20000.00"
+    },
+    {
+      "name": "monthly 1000000",
+      "inputs": {
+        "taxable": 1000000,
+        "periods_per_year": 12
+      },
+      "expect": "162500.00"
+    },
+    {
+      "name": "monthly 5000000",
+      "inputs": {
+        "taxable": 5000000,
+        "periods_per_year": 12
+      },
+      "expect": "1077500.00"
+    }
+  ]
+}

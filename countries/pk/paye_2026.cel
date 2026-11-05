@@ -1,0 +1,2 @@
+// PK income tax for one period: annualise the taxable pay, apply the bands, less the annual relief (never below zero), share back over the periods.
+max(bracket(taxable * periods_per_year, brackets) - relief_annual, 0) / periods_per_year

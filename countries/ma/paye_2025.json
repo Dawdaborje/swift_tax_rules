@@ -1,0 +1,76 @@
+{
+  "id": "ma.paye.2025",
+  "country": "ma",
+  "kind": "income_tax",
+  "currency": "MAD",
+  "valid_from": "2025-01-01",
+  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: Morocco IR annual bands (Finance Law 2025) (https://www.tax.gov.ma). Family charges deduction (about 500 a year per dependent in the 2025 law) and the professional expenses allowance are not modelled.",
+  "verified": false,
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
+  "constants": {
+    "brackets": [
+      [
+        40000,
+        0
+      ],
+      [
+        60000,
+        0.1
+      ],
+      [
+        80000,
+        0.2
+      ],
+      [
+        100000,
+        0.3
+      ],
+      [
+        180000,
+        0.34
+      ],
+      [
+        null,
+        0.37
+      ]
+    ],
+    "relief_annual": 0
+  },
+  "tests": [
+    {
+      "name": "monthly 3000",
+      "inputs": {
+        "taxable": 3000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 6000",
+      "inputs": {
+        "taxable": 6000,
+        "periods_per_year": 12
+      },
+      "expect": "366.67"
+    },
+    {
+      "name": "monthly 10000",
+      "inputs": {
+        "taxable": 10000,
+        "periods_per_year": 12
+      },
+      "expect": "1566.67"
+    },
+    {
+      "name": "monthly 30000",
+      "inputs": {
+        "taxable": 30000,
+        "periods_per_year": 12
+      },
+      "expect": "8816.67"
+    }
+  ]
+}

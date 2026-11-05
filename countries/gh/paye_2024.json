@@ -1,0 +1,89 @@
+{
+  "id": "gh.paye.2024",
+  "country": "gh",
+  "kind": "income_tax",
+  "currency": "GHS",
+  "valid_from": "2024-01-01",
+  "valid_to": "2026-08-31",
+  "source": "UNCONFIRMED (superseded by gh.paye.2026 from 2026-09-01; the GRA page now shows only the 2026 bands), written from recollection and not yet checked against the source: Ghana Revenue Authority resident individual PAYE bands (https://gra.gov.gh). Annualised from the monthly bands (first 490 at 0%, next 110 at 5%, 130 at 10%, 3,166.67 at 17.5%, 16,000 at 25%, 30,520 at 30%, above at 35%). No reliefs modelled: tax-free allowances and the 2025 changes are not handled.",
+  "verified": false,
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
+  "constants": {
+    "brackets": [
+      [
+        5880,
+        0
+      ],
+      [
+        7200,
+        0.05
+      ],
+      [
+        8760,
+        0.1
+      ],
+      [
+        46760,
+        0.175
+      ],
+      [
+        238760,
+        0.25
+      ],
+      [
+        605000,
+        0.3
+      ],
+      [
+        null,
+        0.35
+      ]
+    ],
+    "relief_annual": 0
+  },
+  "tests": [
+    {
+      "name": "monthly 400",
+      "inputs": {
+        "taxable": 400,
+        "periods_per_year": 12
+      },
+      "expect": "0.00"
+    },
+    {
+      "name": "monthly 800",
+      "inputs": {
+        "taxable": 800,
+        "periods_per_year": 12
+      },
+      "expect": "30.75"
+    },
+    {
+      "name": "monthly 2000",
+      "inputs": {
+        "taxable": 2000,
+        "periods_per_year": 12
+      },
+      "expect": "240.75"
+    },
+    {
+      "name": "monthly 10000",
+      "inputs": {
+        "taxable": 10000,
+        "periods_per_year": 12
+      },
+      "expect": "2098.50"
+    },
+    {
+      "name": "monthly 60000",
+      "inputs": {
+        "taxable": 60000,
+        "periods_per_year": 12
+      },
+      "expect": "17082.83"
+    }
+  ]
+}
