@@ -1,0 +1,19 @@
+{
+  "id": "gm.paye.2025",
+  "country": "gm",
+  "kind": "income_tax",
+  "currency": "GMD",
+  "valid_from": "2025-01-01",
+  "source": "Gambia Revenue Authority, Employment Income Tax (PAYE) Brochure (https://gra.gm/download-file/8d0ccc58-d217-11ed-9b31-029254d29bb1, PDF created 18 March 2026, read 2026-11-05): annual bands 0% to D36,000, 5% to D46,000, 10% to D56,000, 15% to D66,000, 20% to D76,000, 25% above; 'No deductions are allowed', so the rate applies to total employment income. The brochure's own text says 'as at January 2018', though it shows the D36,000 threshold that law-firm and payroll summaries date from 1 January 2025 (an older GRA brochure, https://gra.gm/download-file/8d0cd78a-d217-11ed-9b31-029254d29bb1, shows D24,000, 5% to D34,000 and so on, to 25% above D64,000); the 2025 start date is from those summaries, not from a GRA notice or the Finance Act, which were not read. GRA's worked example for D50,000 a month gives D11,333.34 (the sum of lines each rounded); this pack rounds once and gives 11,333.33.",
+  "verified": true,
+  "inputs": ["taxable", "periods_per_year"],
+  "constants": {
+    "brackets": [[36000, 0], [46000, 0.05], [56000, 0.10], [66000, 0.15], [76000, 0.20], [null, 0.25]]
+  },
+  "tests": [
+    { "name": "monthly 3000: the free threshold", "inputs": { "taxable": 3000, "periods_per_year": 12 }, "expect": "0.00" },
+    { "name": "monthly 3500: 5% of 6000 a year", "inputs": { "taxable": 3500, "periods_per_year": 12 }, "expect": "25.00" },
+    { "name": "monthly 6000: 500 + 1000 + 1500 + 1200 a year", "inputs": { "taxable": 6000, "periods_per_year": 12 }, "expect": "350.00" },
+    { "name": "monthly 50000: GRA's example (D11,333.34 by its rounding)", "inputs": { "taxable": 50000, "periods_per_year": 12 }, "expect": "11333.33" }
+  ]
+}

@@ -1,0 +1,3 @@
+// Gambia employment income tax (PAYE) for one period: annualise the employment income, apply the bands, share back over the periods.
+// GRA: no deductions are allowed, so `taxable` is the total employment income of the period.
+bracket(taxable * periods_per_year, brackets) / periods_per_year

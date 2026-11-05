@@ -1,0 +1,5 @@
+// Senegal income tax (IR) on salaries, for one period (CGI arts. 168, 173, 174, 182).
+// 1. annualise the taxable salary; 2. take the 30% abatement (capped); 3. round down to the thousand;
+// 4. apply the progressive scale; 5. subtract the family-charge reduction for the number of parts
+//    (rate of the tax, kept between a minimum and a maximum); 6. the tax cannot exceed 43% of the income; 7. share over the periods.
+min(max(bracket((floor(((gross * periods_per_year) - min(pct((gross * periods_per_year), abatement_rate), abatement_cap)) / 1000) * 1000), brackets) - (min(parts, 5) > 1 ? clamp(pct(bracket((floor(((gross * periods_per_year) - min(pct((gross * periods_per_year), abatement_rate), abatement_cap)) / 1000) * 1000), brackets), rate_at(min(parts, 5), reduction_rate)), rate_at(min(parts, 5), reduction_min), rate_at(min(parts, 5), reduction_max)) : 0), 0), pct((floor(((gross * periods_per_year) - min(pct((gross * periods_per_year), abatement_rate), abatement_cap)) / 1000) * 1000), cap_rate)) / periods_per_year

@@ -30,14 +30,15 @@ not `verified` is reported as such: do not pay anyone with one.
 ## Countries
 
 Packs checked against an official source (see each pack's `source`): Kenya (ke: PAYE, NSSF, SHIF, housing
-levy) and Ghana (gh: PAYE 2026).
+levy), Ghana (gh: PAYE 2026), Nigeria (ng: PAYE, pension), Uganda (ug: PAYE 2026), The Gambia (gm: PAYE) and
+Senegal (sn: income tax, TRIMF, employer contribution).
 
 Packs written but **unverified**; see [TO_CONFIRM.md](TO_CONFIRM.md) before using any of them: Ghana SSNIT,
-Bangladesh (bd), Egypt (eg), Hong Kong (hk), Indonesia (id), India (in), Morocco (ma), Malaysia (my),
-Nigeria (ng), Pakistan (pk), Turkey (tr), Uganda (ug).
+Gambia SSHFC, Bangladesh (bd), Egypt (eg), Hong Kong (hk), Indonesia (id), India (in), Morocco (ma),
+Malaysia (my), Nigeria NHF, Pakistan (pk), Turkey (tr), Uganda NSSF.
 
 `example/` holds demonstration packs with illustrative figures, including `gm.paye.demo` and
-`gm.social.demo` (Gambian shape, invented numbers). Not law. `gm/` (Gambia) has no real figures yet.
+`gm.social.demo` (Gambian shape, invented numbers). Not law.
 
 **Adding a country needs the official schedule** (the revenue authority's notice or the Finance Act
 section) so that `source` can cite it and the tests are worked from it. Figures from memory do not belong

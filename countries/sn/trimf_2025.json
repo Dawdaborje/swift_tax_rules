@@ -1,0 +1,18 @@
+{
+  "id": "sn.trimf.2025",
+  "country": "sn",
+  "kind": "levy",
+  "currency": "XOF",
+  "valid_from": "2025-01-01",
+  "source": "Senegal Code général des impôts, edition of January 2025, DGID (https://www.dgid.sn/storage/docs/CGI-2025.pdf, read 2026-11-05), arts. 275 and 282: withheld at source from salaries by residents, a fixed amount by annual gross income including benefits in cash and in kind: 0 to 599,999 900; 600,000 to 999,999 3,600; 1,000,000 to 1,999,999 4,800; 2,000,000 to 6,999,999 12,000; 7,000,000 to 11,999,999 18,000; 12,000,000 and over 36,000. This gives the amount for the year; how it is spread over the pay periods is not set in the articles read (the usual practice is twelve equal parts, not checked). Exemptions of art. 278 and the pensioner cases are not modelled.",
+  "verified": true,
+  "inputs": ["gross_annual"],
+  "constants": { "amounts": [[599999, 900], [999999, 3600], [1999999, 4800], [6999999, 12000], [11999999, 18000], [null, 36000]] },
+  "rounding": { "digits": 0, "mode": "half_up" },
+  "tests": [
+    { "name": "annual 500000", "inputs": { "gross_annual": 500000 }, "expect": "900" },
+    { "name": "annual 600000: second band", "inputs": { "gross_annual": 600000 }, "expect": "3600" },
+    { "name": "annual 3600000", "inputs": { "gross_annual": 3600000 }, "expect": "12000" },
+    { "name": "annual 12000000 and over", "inputs": { "gross_annual": 15000000 }, "expect": "36000" }
+  ]
+}

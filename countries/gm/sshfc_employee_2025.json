@@ -1,0 +1,15 @@
+{
+  "id": "gm.sshfc_employee.2025",
+  "country": "gm",
+  "kind": "social_security",
+  "currency": "GMD",
+  "valid_from": "2025-01-01",
+  "source": "UNCONFIRMED. Payroll and EOR guides (e.g. https://rivermate.com/guides/gambia/taxes) and one that cites the SSHFC say the employee pays 5% and the employer 10% of basic salary, remitted by the 15th of the following month. Neither the SSHFC site nor the Social Security and Housing Finance Corporation Act could be read (the US SSA country report was blocked), so no official figure was seen. Other guides add a housing fund, a health scheme and an employer-paid injury fund (1% of earnings, at most D15 a month); those are not modelled and disagree between sources.",
+  "verified": false,
+  "inputs": ["basic"],
+  "constants": { "rate": 0.05 },
+  "tests": [
+    { "name": "basic 10000", "inputs": { "basic": 10000 }, "expect": "500.00" },
+    { "name": "basic 25000", "inputs": { "basic": 25000 }, "expect": "1250.00" }
+  ]
+}

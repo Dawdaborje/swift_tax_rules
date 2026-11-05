@@ -1,0 +1,15 @@
+{
+  "id": "sn.cfce.2025",
+  "country": "sn",
+  "kind": "levy",
+  "currency": "XOF",
+  "valid_from": "2025-01-01",
+  "source": "Senegal Code général des impôts, edition of January 2025, DGID (https://www.dgid.sn/storage/docs/CGI-2025.pdf, read 2026-11-05), arts. 265 to 267: employer contribution of 3% of the total of salaries, wages, leave pay, bonuses and allowances of every kind (not expense refunds or family benefits), plus benefits in cash and in kind valued under art. 166. Paid by the employer, not deducted from the employee. Check the later amendments (Loi 2025-17) before use.",
+  "verified": true,
+  "inputs": ["salaries"],
+  "constants": { "rate": 3 },
+  "tests": [
+    { "name": "salaries 1000000", "inputs": { "salaries": 1000000 }, "expect": "30000.00" },
+    { "name": "salaries 250000", "inputs": { "salaries": 250000 }, "expect": "7500.00" }
+  ]
+}

@@ -1,0 +1,2 @@
+// Senegal contribution forfaitaire à la charge des employeurs, for one period: a share of the total salaries paid.
+pct(salaries, rate)

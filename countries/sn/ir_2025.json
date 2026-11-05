@@ -1,0 +1,210 @@
+{
+  "id": "sn.ir.2025",
+  "country": "sn",
+  "kind": "income_tax",
+  "currency": "XOF",
+  "valid_from": "2025-01-01",
+  "source": "Senegal Code général des impôts, consolidated edition of January 2025 ('CGI annoté'), published by the DGID (https://www.dgid.sn/storage/docs/CGI-2025.pdf, read 2026-11-05). Art. 173 (Loi 2022-19): scale on the taxable income rounded down to the thousand: to 630,000 0%; to 1,500,000 20%; to 4,000,000 30%; to 8,000,000 35%; to 13,500,000 37%; to 50,000,000 40%; above 43%. Art. 174: reduction for family charges by number of parts (1 to 5; 1.5 parts 10% of the tax, min 100,000, max 300,000; ... 5 parts 45%, min 800,000, max 3,180,000), and the tax cannot exceed 43% of taxable income. Arts. 168 and 182: salaries are taxed after a 30% flat abatement for mandatory pension contributions and job expenses, at most 900,000 a year; not applied to pensions. Not modelled: the special 10% or 20% abatement for State agents posted abroad, mileage allowances, and the monthly withholding table the DGID may publish (this computes the annual tax and divides it). The reduction is read as rate x tax kept between the minimum and the maximum and never more than the tax; check that reading with the DGID. 'parts' must be one of 1, 1.5, ... 5 (the number of parts the person is entitled to under art. 174). The edition predates Loi 2025-17 of 27 September 2025, which amended the CGI: its effect on these articles was not read.",
+  "verified": true,
+  "inputs": [
+    "gross",
+    "parts",
+    "periods_per_year"
+  ],
+  "constants": {
+    "brackets": [
+      [
+        630000,
+        0
+      ],
+      [
+        1500000,
+        0.2
+      ],
+      [
+        4000000,
+        0.3
+      ],
+      [
+        8000000,
+        0.35
+      ],
+      [
+        13500000,
+        0.37
+      ],
+      [
+        50000000,
+        0.4
+      ],
+      [
+        null,
+        0.43
+      ]
+    ],
+    "abatement_rate": 30,
+    "abatement_cap": 900000,
+    "cap_rate": 43,
+    "reduction_rate": [
+      [
+        1,
+        0
+      ],
+      [
+        1.5,
+        10
+      ],
+      [
+        2,
+        15
+      ],
+      [
+        2.5,
+        20
+      ],
+      [
+        3,
+        25
+      ],
+      [
+        3.5,
+        30
+      ],
+      [
+        4,
+        35
+      ],
+      [
+        4.5,
+        40
+      ],
+      [
+        5,
+        45
+      ]
+    ],
+    "reduction_min": [
+      [
+        1,
+        0
+      ],
+      [
+        1.5,
+        100000
+      ],
+      [
+        2,
+        200000
+      ],
+      [
+        2.5,
+        300000
+      ],
+      [
+        3,
+        400000
+      ],
+      [
+        3.5,
+        500000
+      ],
+      [
+        4,
+        600000
+      ],
+      [
+        4.5,
+        700000
+      ],
+      [
+        5,
+        800000
+      ]
+    ],
+    "reduction_max": [
+      [
+        1,
+        0
+      ],
+      [
+        1.5,
+        300000
+      ],
+      [
+        2,
+        650000
+      ],
+      [
+        2.5,
+        1100000
+      ],
+      [
+        3,
+        1650000
+      ],
+      [
+        3.5,
+        2030000
+      ],
+      [
+        4,
+        2490000
+      ],
+      [
+        4.5,
+        2755000
+      ],
+      [
+        5,
+        3180000
+      ]
+    ]
+  },
+  "tests": [
+    {
+      "name": "monthly 100000, 1 part: 30% abatement then 20% of 210000 over the first band, 42000 a year",
+      "inputs": {
+        "gross": 100000,
+        "parts": 1,
+        "periods_per_year": 12
+      },
+      "expect": "3500.00"
+    },
+    {
+      "name": "monthly 300000, 1 part: abatement capped at 900000, base 2700000, 174000 + 360000 a year",
+      "inputs": {
+        "gross": 300000,
+        "parts": 1,
+        "periods_per_year": 12
+      },
+      "expect": "44500.00"
+    },
+    {
+      "name": "monthly 300000, 3 parts: reduction 25% is 133500, raised to the minimum 400000",
+      "inputs": {
+        "gross": 300000,
+        "parts": 3,
+        "periods_per_year": 12
+      },
+      "expect": "11166.67"
+    },
+    {
+      "name": "monthly 1000000, 2.5 parts: tax 3471000, reduction 20% = 694200",
+      "inputs": {
+        "gross": 1000000,
+        "parts": 2.5,
+        "periods_per_year": 12
+      },
+      "expect": "231400.00"
+    },
+    {
+      "name": "monthly 10000000, 1 part: reaches the 43% band",
+      "inputs": {
+        "gross": 10000000,
+        "parts": 1,
+        "periods_per_year": 12
+      },
+      "expect": "4056000.00"
+    }
+  ]
+}

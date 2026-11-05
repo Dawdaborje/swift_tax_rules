@@ -1,0 +1,2 @@
+// Senegal TRIMF (taxe représentative de l'impôt du minimum fiscal), for a year: a fixed amount by band of annual gross income.
+rate_at(floor(gross_annual), amounts)

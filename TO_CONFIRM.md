@@ -10,7 +10,7 @@ Nothing was copied from them.
 
 ## Verified (read from the official source on 2026-11-05)
 `ke.paye.2025` (KRA page: bands to 35%, relief 2,400 a month), `ke.housing_levy.2024` (KRA notice 2099),
-`ke.nssf.2026` (NSSF Year 4 notice, hosted copy), `ke.shif.2024` (SHA premium page), `gh.paye.2026` (GRA page), `ng.paye.2026` (Nigeria Tax Act 2025, Fourth Schedule and s.30, gazette copy), `ug.paye.2026` (URA PAYE rates page after the Income Tax (Amendment) Act 2026; gazetted Act not read), `ng.pension_employee.2014` (Pension Reform Act 2014 s.4(1) and s.120, gazetted copy).
+`ke.nssf.2026` (NSSF Year 4 notice, hosted copy), `ke.shif.2024` (SHA premium page), `gh.paye.2026` (GRA page), `ng.paye.2026` (Nigeria Tax Act 2025, Fourth Schedule and s.30, gazette copy), `ug.paye.2026` (URA PAYE rates page after the Income Tax (Amendment) Act 2026; gazetted Act not read), `gm.paye.2025` (GRA PAYE brochure; its text still says 'as at January 2018' and the 2025 start date is from summaries), `sn.ir.2025`, `sn.trimf.2025`, `sn.cfce.2025` (CGI January 2025 edition from the DGID; Loi 2025-17 of 27 September 2025 not read), `ng.pension_employee.2014` (Pension Reform Act 2014 s.4(1) and s.120, gazetted copy).
 `gh.paye.2024` is retired on 2026-08-31 and stays unverified. Still open: GRA's effective date (the page says
 1 September 2026 under the annual table only), the text of Act 1178, Ghana tax reliefs, Kenya insurance relief.
 
@@ -31,17 +31,15 @@ Nothing was copied from them.
 | `bd.paye.2025` | NBR | Slabs for assessment year 2025-26; different thresholds for women, senior citizens and others. |
 | `hk.salaries_tax.2024` | IRD | Rates and the standard-rate cap; allowances belong off income, not off tax as modelled. |
 
+| `gm.sshfc_employee.2025` | SSHFC, SSHFC Act | 5% employee, 10% employer of basic salary from payroll guides only; housing, health and injury-fund contributions disagree between sources. |
+| `sn` social security | IPRES and Caisse de Sécurité Sociale | No pack yet: IPRES general scheme (employee 5.6%, employer 8.4%) and the family-benefit contribution (employer 7%, ceiling 63,000 a month) are in secondary sources only, and the IPRES ceiling is disputed (256,000 or 432,000 a month); the complementary scheme for managers is also not written. |
+| `sn.ir.2025` | DGID | The reading of the art. 174 reduction (rate x tax kept between minimum and maximum); whether monthly withholding uses the annual computation divided by 12; effect of Loi 2025-17. |
+
 ## Countries Odoo has that have no pack yet
 `ae`, `sa` (no income tax; social insurance only), `jo`, `au`, `us`, `mx`, `be`, `fr`, `nl`, `pl`, `ro`, `sk`, `lt`, `lu`, `ch`.
 Each needs a source read first. Several (US, Switzerland, Belgium, France) depend on filing status, region or
 commune and need more inputs than one rule takes.
 
 ## Countries in the README with no usable pack
-- `gm` (Gambia): `countries/gm/paye_2025.cel` is empty and has no description. No figures were written, because
-  the secondary sources found (October 2026) disagree:
-  - tax-free threshold of 12,000, 24,000 or 36,000 a year (36,000 said to apply from 1 January 2025);
-  - top rate of 25% or 30%, with 5% to 25% in steps in one source and 15% / 25% / 30% above 72,000 in another;
-  - employee SSHFC contribution of 5% of basic salary in most sources, 10% in one;
-  - Industrial Injuries Compensation Fund: 1% of earnings, capped at 15 a month, employer-paid.
-  The Gambia Revenue Authority's current monthly tax table settles all of these. Write the pack from that.
+- `gm` (Gambia): now has `gm.paye.2025` (verified against the GRA PAYE brochure) and `gm.sshfc_employee.2025` (unverified).
 - `ng`: now has packs (above).
