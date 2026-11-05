@@ -1,11 +1,36 @@
 {
-  "id": "ke.housing_levy.2024", "country": "ke", "kind": "levy", "currency": "KES", "valid_from": "2024-03-19",
+  "id": "ke.housing_levy.2024",
+  "country": "ke",
+  "kind": "levy",
+  "currency": "KES",
+  "valid_from": "2024-03-19",
   "source": "Read on the KRA notice 2026-11-05: Kenya Revenue Authority, collection of the Affordable Housing Levy: https://www.kra.go.ke/news-center/public-notices/2099-collection-of-the-affordable-housing-levy-by-kenya-revenue-authority (1.5% from the employee and 1.5% from the employer, on gross pay, from 19 March 2024).",
+  "source_files": [
+    "ke/kra_housing_levy_notice_2099.html"
+  ],
   "verified": true,
-  "inputs": ["gross"],
-  "constants": { "levy_rate": 0.015 },
+  "inputs": [
+    "gross"
+  ],
+  "constants": {
+    "levy_rate": 0.015
+  },
   "tests": [
-    { "name": "1.5% of 50000", "inputs": { "gross": 50000 }, "expect": "750.00" },
-    { "name": "1.5% of 33333", "inputs": { "gross": 33333 }, "expect": "500.00" }
+    {
+      "name": "1.5% of 50000",
+      "inputs": {
+        "gross": 50000
+      },
+      "expect": "750.00",
+      "origin": "calculated"
+    },
+    {
+      "name": "1.5% of 33333",
+      "inputs": {
+        "gross": 33333
+      },
+      "expect": "500.00",
+      "origin": "calculated"
+    }
   ]
 }

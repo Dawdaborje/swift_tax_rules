@@ -1,0 +1,113 @@
+{
+  "note": "Local copies of the pages and documents the packs cite, as read on the retrieved date. Paths are relative to sources/. Check with scripts/verify_sources.py.",
+  "files": [
+    {
+      "path": "gh/gra_paye_2026.html",
+      "url": "https://gra.gov.gh/domestic-tax/tax-types/paye/",
+      "retrieved": "2026-11-05",
+      "sha256": "f047e0ec3cb2f69aa0f6a3fdd02fa63d76735354edf9b16250664e62169a4502",
+      "bytes": 160772,
+      "kind": "official page",
+      "describes": "Ghana Revenue Authority PAYE page, resident bands for Year of Assessment 2026"
+    },
+    {
+      "path": "ke/kra_paye.html",
+      "url": "https://www.kra.go.ke/individual/filing-paying/types-of-taxes/paye",
+      "retrieved": "2026-11-05",
+      "sha256": "a1e75b08af44521dd9cc983cf8cf900f012817732255d0629dd8ea809ce5b1dd",
+      "bytes": 112338,
+      "kind": "official page",
+      "describes": "KRA PAYE page: bands, personal relief, deductible items"
+    },
+    {
+      "path": "ke/kra_housing_levy_notice_2099.html",
+      "url": "https://www.kra.go.ke/news-center/public-notices/2099-collection-of-the-affordable-housing-levy-by-kenya-revenue-authority",
+      "retrieved": "2026-11-05",
+      "sha256": "be9dfe9ab4d2132b73417f1b5d17967185f939b2079c8b0c22e93b088c223e0c",
+      "bytes": 96679,
+      "kind": "official page",
+      "describes": "KRA public notice 2099, Affordable Housing Levy"
+    },
+    {
+      "path": "ke/sha_premium_rates.html",
+      "url": "https://sha.go.ke/premium-rates",
+      "retrieved": "2026-11-05",
+      "sha256": "2ed7d55a142f062133369d1510ae72d993b3a2dee6be526f6fa4b3697f9147d6",
+      "bytes": 91321,
+      "kind": "official page",
+      "describes": "Social Health Authority premium rates"
+    },
+    {
+      "path": "ke/nssf_year4_notice_2026.pdf",
+      "url": "https://gaa.go.ke/sites/default/files/2026-02/Notice%20To%20Employers%20%E2%80%94%20Year%204%20%282026%29%20NSSF%20Contribution%20Rates%20.pdf",
+      "retrieved": "2026-11-05",
+      "sha256": "8704db41ed1759587cba86936d3bf1ff7cd84d9072aac1472a9f22bcb91fbfaf",
+      "bytes": 162381,
+      "kind": "copy of the NSSF's notice, hosted on a government site (gaa.go.ke); image-only PDF",
+      "describes": "NSSF Notice to Employers, Year 4 (2026) contribution rates"
+    },
+    {
+      "path": "ng/nigeria_tax_act_2025_gazette_copy.pdf",
+      "url": "https://ait.live/wp-content/uploads/2026/01/Final-Approved-Copy-for-Print-NIGERIA-TAX-ACT-2025.pdf",
+      "retrieved": "2026-11-05",
+      "sha256": "41abf6887bc58a3c97116fd9a048aa91ad49c1cab156f39065a58401c0fce94f",
+      "bytes": 598389,
+      "kind": "third-party host of the gazette text",
+      "describes": "Nigeria Tax Act 2025 (Act No. 7 of 2025)"
+    },
+    {
+      "path": "ng/pension_reform_act_2014_gazetted_copy.pdf",
+      "url": "http://ngfrepository.org.ng:8080/jspui/bitstream/123456789/968/1/PENSION%20REFORM%20ACT%202014%20-%20GAZETTED%20COPY.pdf",
+      "retrieved": "2026-11-05",
+      "sha256": "38ca11505306cd8899ccf2d2891d0e850295c271d1f747bb7d19f05e5d31d0b1",
+      "bytes": 1226742,
+      "kind": "National Assembly repository copy; scanned pages, no text layer",
+      "describes": "Pension Reform Act 2014 (Act No. 4 of 2014)"
+    },
+    {
+      "path": "ng/topeadebayo_nta_commentary.pdf",
+      "url": "https://topeadebayolp.com/wp-content/uploads/2025/07/Nigeria-Tax-Act-2025.pdf",
+      "retrieved": "2026-11-05",
+      "sha256": "db06291df607a07606c83b31222d927b9e5296fea7e2a714ae1504d3163e9d92",
+      "bytes": 3946593,
+      "kind": "law-firm commentary (secondary, not the Act)",
+      "describes": "Tope Adebayo LP, 'Nigeria Tax Act, 2025: An Outlook of Income and Profit Taxation'; used only for a worked example"
+    },
+    {
+      "path": "ug/ura_paye_rates.html",
+      "url": "https://ura.go.ug/en/domestic-taxes/paye-rates/",
+      "retrieved": "2026-11-05",
+      "sha256": "2b6fda50c3a12d6c83398b50ed62a7991bcf37cc888981a31de7ea35d6eea942",
+      "bytes": 399755,
+      "kind": "official page",
+      "describes": "URA PAYE rates page after the Income Tax (Amendment) Act 2026"
+    },
+    {
+      "path": "gm/gra_paye_brochure.pdf",
+      "url": "https://gra.gm/download-file/8d0ccc58-d217-11ed-9b31-029254d29bb1",
+      "retrieved": "2026-11-05",
+      "sha256": "289fde30ed14f89f46f1c1dbbb875df723c7b8bfa87dadfb4c1f09a7fd161460",
+      "bytes": 165101,
+      "kind": "official brochure",
+      "describes": "GRA Employment Income Tax (PAYE) Brochure, PDF created 2026-03-18"
+    },
+    {
+      "path": "gm/gra_personal_income_tax_brochure_2023.pdf",
+      "url": "https://gra.gm/download-file/8d0cd78a-d217-11ed-9b31-029254d29bb1",
+      "retrieved": "2026-11-05",
+      "sha256": "f81f51d46f2475c7cd531a8a51a221b914e4bbc1b14147b58945f7e3c8e021b3",
+      "bytes": 133964,
+      "kind": "official brochure (older bands)",
+      "describes": "GRA Personal Income Tax brochure, PDF created 2023-08-21; shows the earlier D24,000 threshold"
+    },
+    {
+      "path": "sn/dgid_cgi_2025_01.pdf",
+      "url": "https://www.dgid.sn/storage/docs/CGI-2025.pdf",
+      "retrieved": "2026-11-05",
+      "sha256": "dd900a24f25431de76b16ede89ffb8c80fe4cba63b64f054ee1b82e2bc6064dd",
+      "bytes": 8100593,
+      "kind": "official publication",
+      "describes": "Senegal Code général des impôts, CGI annoté, January 2025"
+    }
+  ]
+}

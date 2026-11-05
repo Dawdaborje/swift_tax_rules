@@ -5,6 +5,10 @@
   "currency": "KES",
   "valid_from": "2024-10-01",
   "source": "Social Health Authority, premium rates (https://sha.go.ke/premium-rates), read 2026-11-05: employers deduct 2.75% of gross salary, minimum 300 a month, no upper limit. The page gives no effective date; October 2024 is from EY (https://www.ey.com/en_gl/technical/tax-alerts/kenya-employers-to-begin-making-contributions-to-social-health-insurance-fund). KRA lists SHIF contributions as deductible for PAYE (https://www.kra.go.ke/individual/filing-paying/types-of-taxes/paye), so deduct it before ke.paye.",
+  "source_files": [
+    "ke/sha_premium_rates.html",
+    "ke/kra_paye.html"
+  ],
   "verified": true,
   "inputs": [
     "gross"
@@ -19,21 +23,24 @@
       "inputs": {
         "gross": 50000
       },
-      "expect": "1375.00"
+      "expect": "1375.00",
+      "origin": "calculated"
     },
     {
       "name": "minimum applies at 10,000",
       "inputs": {
         "gross": 10000
       },
-      "expect": "300.00"
+      "expect": "300.00",
+      "origin": "calculated"
     },
     {
       "name": "2.75% of 200,000 (no cap)",
       "inputs": {
         "gross": 200000
       },
-      "expect": "5500.00"
+      "expect": "5500.00",
+      "origin": "calculated"
     }
   ]
 }

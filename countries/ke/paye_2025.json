@@ -1,19 +1,97 @@
 {
-  "id": "ke.paye.2025", "country": "ke", "kind": "income_tax", "currency": "KES", "valid_from": "2025-01-01",
+  "id": "ke.paye.2025",
+  "country": "ke",
+  "kind": "income_tax",
+  "currency": "KES",
+  "valid_from": "2025-01-01",
   "source": "Kenya Revenue Authority, PAYE (https://www.kra.go.ke/individual/filing-paying/types-of-taxes/paye), read 2026-11-05; the page gives these bands as effective 1 July 2023. Annual: 10% on the first 288,000, 25% on the next 100,000, 30% on the next 5,612,000, 32.5% on the next 3,600,000, 35% above 9,600,000. Personal relief 2,400 a month (28,800 a year). The page lists as deductible from income, so take them off before passing taxable pay: Affordable Housing Levy, SHIF, post-retirement medical fund (15,000 a month), mortgage interest (30,000 a month) and registered pension or provident contributions (30,000 a month). Insurance relief is not modelled.",
+  "source_files": [
+    "ke/kra_paye.html"
+  ],
   "verified": true,
-  "inputs": ["taxable", "periods_per_year"],
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
   "constants": {
-    "brackets": [[288000, 0.10], [388000, 0.25], [6000000, 0.30], [9600000, 0.325], [null, 0.35]],
+    "brackets": [
+      [
+        288000,
+        0.1
+      ],
+      [
+        388000,
+        0.25
+      ],
+      [
+        6000000,
+        0.3
+      ],
+      [
+        9600000,
+        0.325
+      ],
+      [
+        null,
+        0.35
+      ]
+    ],
     "personal_relief_annual": 28800
   },
   "tests": [
-    { "name": "monthly 50000: 117400 a year less 28800 relief, over 12", "inputs": { "taxable": 50000, "periods_per_year": 12 }, "expect": "7383.33" },
-    { "name": "monthly 20000: relief wipes out the tax", "inputs": { "taxable": 20000, "periods_per_year": 12 }, "expect": "0.00" },
-    { "name": "monthly 24000: top of the first band", "inputs": { "taxable": 24000, "periods_per_year": 12 }, "expect": "0.00" },
-    { "name": "monthly 100000: 28800 + 25000 + 243600 = 297400 a year, less 28800 relief, over 12", "inputs": { "taxable": 100000, "periods_per_year": 12 }, "expect": "22383.33" }
-    ,
-    { "name": "monthly 500000: top of the 30% band, 28800 + 25000 + 1683600 = 1737400 a year, less 28800 relief, over 12", "inputs": { "taxable": 500000, "periods_per_year": 12 }, "expect": "142383.33" },
-    { "name": "monthly 1000000: reaches the 32.5% and 35% bands, 3747400 a year, less 28800 relief, over 12", "inputs": { "taxable": 1000000, "periods_per_year": 12 }, "expect": "309883.33" }
+    {
+      "name": "monthly 50000: 117400 a year less 28800 relief, over 12",
+      "inputs": {
+        "taxable": 50000,
+        "periods_per_year": 12
+      },
+      "expect": "7383.33",
+      "origin": "calculated"
+    },
+    {
+      "name": "monthly 20000: relief wipes out the tax",
+      "inputs": {
+        "taxable": 20000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00",
+      "origin": "calculated"
+    },
+    {
+      "name": "monthly 24000: top of the first band",
+      "inputs": {
+        "taxable": 24000,
+        "periods_per_year": 12
+      },
+      "expect": "0.00",
+      "origin": "calculated"
+    },
+    {
+      "name": "monthly 100000: 28800 + 25000 + 243600 = 297400 a year, less 28800 relief, over 12",
+      "inputs": {
+        "taxable": 100000,
+        "periods_per_year": 12
+      },
+      "expect": "22383.33",
+      "origin": "calculated"
+    },
+    {
+      "name": "monthly 500000: top of the 30% band, 28800 + 25000 + 1683600 = 1737400 a year, less 28800 relief, over 12",
+      "inputs": {
+        "taxable": 500000,
+        "periods_per_year": 12
+      },
+      "expect": "142383.33",
+      "origin": "calculated"
+    },
+    {
+      "name": "monthly 1000000: reaches the 32.5% and 35% bands, 3747400 a year, less 28800 relief, over 12",
+      "inputs": {
+        "taxable": 1000000,
+        "periods_per_year": 12
+      },
+      "expect": "309883.33",
+      "origin": "calculated"
+    }
   ]
 }

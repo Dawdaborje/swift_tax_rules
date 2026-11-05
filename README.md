@@ -17,6 +17,17 @@ Two files side by side:
 
 See `countries/example/` for a complete pack and `schemas/tax_rule.schema.json` for the format.
 
+## Sources and what a test proves
+
+* `source` in each pack cites the law or notice. `source_files` lists the saved copy of it under
+  [`sources/`](sources), each with its SHA-256 and the URL and date it was read in
+  [`sources/MANIFEST.json`](sources/MANIFEST.json). Pages change; the saved copy is what the pack was checked
+  against. `python3 scripts/verify_sources.py` checks the hashes and that every verified pack has its sources.
+* Each test says where its expected value comes from, in `origin`: `authority` (a figure or worked example the
+  tax authority prints, with `source_ref` saying where), `secondary` (a third party's example) or `calculated`
+  (worked out by hand from the source's rates). A `calculated` test shows the expression applies the cited
+  figures correctly; it does not show the source gives that result. Packs not yet reviewed have no `origin`.
+
 ## Checking
 
 ```bash

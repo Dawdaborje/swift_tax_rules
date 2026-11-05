@@ -5,6 +5,9 @@
   "currency": "KES",
   "valid_from": "2026-02-01",
   "source": "NSSF, Notice to Employers, Year 4 (2026) NSSF Contribution Rates, read 2026-11-05 as a copy hosted on gaa.go.ke (https://gaa.go.ke/sites/default/files/2026-02/Notice%20To%20Employers%20%E2%80%94%20Year%204%20%282026%29%20NSSF%20Contribution%20Rates%20.pdf), signed by the NSSF Managing Trustee/CEO: from February 2026 lower earnings limit 9,000 (6% = 540), upper earnings limit 108,000 (6% of the upper limit less the lower = 5,940), maximum 6,480 per employee and per employer. The employer matches this; it is not a separate pack. The original on nssf.or.ke was not opened.",
+  "source_files": [
+    "ke/nssf_year4_notice_2026.pdf"
+  ],
   "verified": true,
   "inputs": [
     "pensionable"
@@ -19,28 +22,34 @@
       "inputs": {
         "pensionable": 50000
       },
-      "expect": "3000.00"
+      "expect": "3000.00",
+      "origin": "calculated"
     },
     {
       "name": "at the limit: 6% of 108,000",
       "inputs": {
         "pensionable": 108000
       },
-      "expect": "6480.00"
+      "expect": "6480.00",
+      "origin": "authority",
+      "source_ref": "notice: maximum contribution by employee 6,480"
     },
     {
       "name": "above the limit is capped at 6,480",
       "inputs": {
         "pensionable": 300000
       },
-      "expect": "6480.00"
+      "expect": "6480.00",
+      "origin": "authority",
+      "source_ref": "notice: maximum contribution by employee 6,480"
     },
     {
       "name": "low pay: 6% of 8,000",
       "inputs": {
         "pensionable": 8000
       },
-      "expect": "480.00"
+      "expect": "480.00",
+      "origin": "calculated"
     }
   ]
 }

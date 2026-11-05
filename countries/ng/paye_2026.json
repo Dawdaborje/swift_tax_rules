@@ -5,6 +5,10 @@
   "currency": "NGN",
   "valid_from": "2026-01-01",
   "source": "Nigeria Tax Act, 2025 (Act No. 7 of 2025, commencement 1 January 2026), gazette copy read 2026-11-05 (https://ait.live/wp-content/uploads/2026/01/Final-Approved-Copy-for-Print-NIGERIA-TAX-ACT-2025.pdf). Fourth Schedule under section 58: first 800,000 at 0%, next 2,200,000 at 15%, next 9,000,000 at 18%, next 13,000,000 at 21%, next 25,000,000 at 23%, above 50,000,000 at 25%. These apply to income after the eligible deductions of section 30(2): National Housing Fund, National Health Insurance Scheme and Pension Reform Act contributions, interest on a loan for an owner-occupied home, life insurance premiums, and rent relief (20% of annual rent, at most 500,000, when the rent is declared). Pass taxable pay after those deductions; none are applied inside the pack. The copy is a third-party host of the gazette, not nass.gov.ng or the Nigeria Revenue Service.",
+  "source_files": [
+    "ng/nigeria_tax_act_2025_gazette_copy.pdf",
+    "ng/topeadebayo_nta_commentary.pdf"
+  ],
   "verified": true,
   "inputs": [
     "taxable",
@@ -46,7 +50,8 @@
         "taxable": 50000,
         "periods_per_year": 12
       },
-      "expect": "0.00"
+      "expect": "0.00",
+      "origin": "calculated"
     },
     {
       "name": "monthly 200000",
@@ -54,7 +59,8 @@
         "taxable": 200000,
         "periods_per_year": 12
       },
-      "expect": "20000.00"
+      "expect": "20000.00",
+      "origin": "calculated"
     },
     {
       "name": "monthly 1000000",
@@ -62,7 +68,8 @@
         "taxable": 1000000,
         "periods_per_year": 12
       },
-      "expect": "162500.00"
+      "expect": "162500.00",
+      "origin": "calculated"
     },
     {
       "name": "monthly 5000000",
@@ -70,7 +77,18 @@
         "taxable": 5000000,
         "periods_per_year": 12
       },
-      "expect": "1077500.00"
+      "expect": "1077500.00",
+      "origin": "calculated"
+    },
+    {
+      "name": "annual 10,000,000: 330,000 + 1,260,000 (the law firm's example)",
+      "inputs": {
+        "taxable": 10000000,
+        "periods_per_year": 1
+      },
+      "expect": "1590000.00",
+      "origin": "secondary",
+      "source_ref": "Tope Adebayo LP commentary: 0% on 800,000, 15% on 2,200,000, 18% on 7,000,000 gives N1,590,000 (sources/ng/topeadebayo_nta_commentary.pdf); not from the Act itself"
     }
   ]
 }

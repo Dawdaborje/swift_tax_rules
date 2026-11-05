@@ -5,17 +5,92 @@
   "currency": "GHS",
   "valid_from": "2026-09-01",
   "source": "Ghana Revenue Authority, PAYE, resident individual bands for Year of Assessment 2026 (https://gra.gov.gh/domestic-tax/tax-types/paye/), read 2026-11-05. Monthly: first 588 at 0%, next 80 at 5%, next 100 at 10%, next 2,900 at 17.5%, next 16,000 at 25%, next 30,332 at 30%, above 50,000 at 35%; annual table is 12 times these. The page says 'These rates took effect September 1st, 2026' under the annual table. Not modelled: reliefs (none applied here: pass taxable pay after SSNIT and other deductions) and the flat 25% for non-residents. Amending acts listed on the page: Act 1178 (2026) and Act 1071 (2021); their text was not read.",
+  "source_files": [
+    "gh/gra_paye_2026.html"
+  ],
   "verified": true,
-  "inputs": ["taxable", "periods_per_year"],
+  "inputs": [
+    "taxable",
+    "periods_per_year"
+  ],
   "constants": {
-    "brackets": [[7056, 0], [8016, 0.05], [9216, 0.10], [44016, 0.175], [236016, 0.25], [600000, 0.30], [null, 0.35]],
+    "brackets": [
+      [
+        7056,
+        0
+      ],
+      [
+        8016,
+        0.05
+      ],
+      [
+        9216,
+        0.1
+      ],
+      [
+        44016,
+        0.175
+      ],
+      [
+        236016,
+        0.25
+      ],
+      [
+        600000,
+        0.3
+      ],
+      [
+        null,
+        0.35
+      ]
+    ],
     "relief_annual": 0
   },
   "tests": [
-    { "name": "monthly 400: inside the free band", "inputs": { "taxable": 400, "periods_per_year": 12 }, "expect": "0.00" },
-    { "name": "monthly 800: 4 + 10 + 5.60", "inputs": { "taxable": 800, "periods_per_year": 12 }, "expect": "19.60" },
-    { "name": "monthly 2000: 4 + 10 + 215.60", "inputs": { "taxable": 2000, "periods_per_year": 12 }, "expect": "229.60" },
-    { "name": "monthly 10000: 4 + 10 + 507.50 + 1583", "inputs": { "taxable": 10000, "periods_per_year": 12 }, "expect": "2104.50" },
-    { "name": "monthly 60000: reaches the 35% band", "inputs": { "taxable": 60000, "periods_per_year": 12 }, "expect": "17121.10" }
+    {
+      "name": "monthly 400: inside the free band",
+      "inputs": {
+        "taxable": 400,
+        "periods_per_year": 12
+      },
+      "expect": "0.00",
+      "origin": "calculated"
+    },
+    {
+      "name": "monthly 800: 4 + 10 + 5.60",
+      "inputs": {
+        "taxable": 800,
+        "periods_per_year": 12
+      },
+      "expect": "19.60",
+      "origin": "calculated"
+    },
+    {
+      "name": "monthly 2000: 4 + 10 + 215.60",
+      "inputs": {
+        "taxable": 2000,
+        "periods_per_year": 12
+      },
+      "expect": "229.60",
+      "origin": "calculated"
+    },
+    {
+      "name": "monthly 10000: 4 + 10 + 507.50 + 1583",
+      "inputs": {
+        "taxable": 10000,
+        "periods_per_year": 12
+      },
+      "expect": "2104.50",
+      "origin": "calculated"
+    },
+    {
+      "name": "monthly 60000: reaches the 35% band",
+      "inputs": {
+        "taxable": 60000,
+        "periods_per_year": 12
+      },
+      "expect": "17121.10",
+      "origin": "calculated"
+    }
   ]
 }
