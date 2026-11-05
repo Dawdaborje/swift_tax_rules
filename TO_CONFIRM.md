@@ -10,7 +10,7 @@ Nothing was copied from them.
 
 ## Verified (read from the official source on 2026-11-05)
 `ke.paye.2025` (KRA page: bands to 35%, relief 2,400 a month), `ke.housing_levy.2024` (KRA notice 2099),
-`ke.nssf.2026` (NSSF Year 4 notice, hosted copy), `ke.shif.2024` (SHA premium page), `gh.paye.2026` (GRA page), `ng.paye.2026` (Nigeria Tax Act 2025, Fourth Schedule and s.30, gazette copy), `ug.paye.2026` (URA PAYE rates page after the Income Tax (Amendment) Act 2026; gazetted Act not read), `gm.paye.2025` (GRA PAYE brochure; its text still says 'as at January 2018' and the 2025 start date is from summaries), `sn.ir.2025`, `sn.trimf.2025`, `sn.cfce.2025` (CGI January 2025 edition from the DGID; Loi 2025-17 of 27 September 2025 not read), `ng.pension_employee.2014` (Pension Reform Act 2014 s.4(1) and s.120, gazetted copy).
+`ke.nssf.2026` (NSSF Year 4 notice, hosted copy), `ke.shif.2024` (SHA premium page), `gh.paye.2026` (GRA page), `ng.paye.2026` (Nigeria Tax Act 2025, Fourth Schedule and s.30, gazette copy), `ug.paye.2026` (URA PAYE rates page after the Income Tax (Amendment) Act 2026; gazetted Act not read), `gm.paye.2025` (GRA PAYE brochure; its text still says 'as at January 2018'; the 2025 start is corroborated by Sage and Payspace summaries; the Finance Acts were not found), `sn.ir.2025`, `sn.trimf.2025`, `sn.cfce.2025` (CGI January and October 2025 editions; Loi 2025-17 and the LFI 2026 checked on 2026-11-05 and do not change these articles; the 2026 amending bill was rejected on 3 November 2026), `ng.pension_employee.2014` (Pension Reform Act 2014 s.4(1) and s.120, gazetted copy).
 `gh.paye.2024` is retired on 2026-08-31 and stays unverified. Still open: GRA's effective date (the page says
 1 September 2026 under the annual table only), the text of Act 1178, Ghana tax reliefs, Kenya insurance relief.
 
@@ -33,7 +33,7 @@ Nothing was copied from them.
 
 | `gm.sshfc_employee.2025` | SSHFC, SSHFC Act | 5% employee, 10% employer of basic salary from payroll guides only; housing, health and injury-fund contributions disagree between sources. |
 | `sn` social security | IPRES and Caisse de Sécurité Sociale | No pack yet: IPRES general scheme (employee 5.6%, employer 8.4%) and the family-benefit contribution (employer 7%, ceiling 63,000 a month) are in secondary sources only, and the IPRES ceiling is disputed (256,000 or 432,000 a month); the complementary scheme for managers is also not written. |
-| `sn.ir.2025` | DGID | The reading of the art. 174 reduction (rate x tax kept between minimum and maximum); whether monthly withholding uses the annual computation divided by 12; effect of Loi 2025-17. |
+| `sn.ir.2025` | DGID | The reading of the art. 174 reduction (rate x tax kept between minimum and maximum); whether monthly withholding uses the annual computation divided by 12; a monthly withholding table, if the DGID publishes one. |
 
 ## Countries Odoo has that have no pack yet
 `ae`, `sa` (no income tax; social insurance only), `jo`, `au`, `us`, `mx`, `be`, `fr`, `nl`, `pl`, `ro`, `sk`, `lt`, `lu`, `ch`.

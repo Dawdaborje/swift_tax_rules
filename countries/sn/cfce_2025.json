@@ -4,9 +4,10 @@
   "kind": "levy",
   "currency": "XOF",
   "valid_from": "2025-01-01",
-  "source": "Senegal Code général des impôts, edition of January 2025, DGID (https://www.dgid.sn/storage/docs/CGI-2025.pdf, read 2026-11-05), arts. 265 to 267: employer contribution of 3% of the total of salaries, wages, leave pay, bonuses and allowances of every kind (not expense refunds or family benefits), plus benefits in cash and in kind valued under art. 166. Paid by the employer, not deducted from the employee. Check the later amendments (Loi 2025-17) before use.",
+  "source": "Senegal Code général des impôts, January 2025 edition on the DGID site (https://www.dgid.sn/storage/docs/CGI-2025.pdf) and the October 2025 edition saved in sources/, read 2026-11-05, arts. 265 to 267: employer contribution of 3% of the total of salaries, wages, leave pay, bonuses and allowances of every kind (not expense refunds or family benefits), plus benefits in cash and in kind valued under art. 166. Paid by the employer, not deducted from the employee. Currency check on 2026-11-05: the October 2025 consolidated edition (after Loi 2025-17 of 27 September 2025, JO 7853) has these articles word for word as the January 2025 edition; the 2026 Finance Law, Loi 2025-19 of 22 December 2025 (JO 7873, 8 January 2026), has 25 budget articles and does not amend them; the amending finance bill for 2026 (PLFR, projet de loi 40/2026) was rejected by the National Assembly on 3 November 2026 and in any case did not touch them. A later law not found by searching could still change them.",
   "source_files": [
-    "sn/dgid_cgi_2025_01.pdf"
+    "sn/cgi_annote_2025_10.pdf",
+    "sn/lfi_2026_jo7873.ocr.txt"
   ],
   "verified": true,
   "inputs": [

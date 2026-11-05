@@ -9,6 +9,8 @@ listed = {f["path"]: f for f in manifest["files"]}
 problems = []
 for path, f in listed.items():
     file = root / "sources" / path
+    if f.get("stored") is False:
+        continue  # too large to keep; the manifest records its hash and URL only
     if not file.exists():
         problems.append(f"missing: {path}")
     elif hashlib.sha256(file.read_bytes()).hexdigest() != f["sha256"]:

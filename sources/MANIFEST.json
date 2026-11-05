@@ -101,15 +101,6 @@
       "describes": "GRA Personal Income Tax brochure, PDF created 2023-08-21; shows the earlier D24,000 threshold"
     },
     {
-      "path": "sn/dgid_cgi_2025_01.pdf",
-      "url": "https://www.dgid.sn/storage/docs/CGI-2025.pdf",
-      "retrieved": "2026-11-05",
-      "sha256": "dd900a24f25431de76b16ede89ffb8c80fe4cba63b64f054ee1b82e2bc6064dd",
-      "bytes": 8100593,
-      "kind": "official publication",
-      "describes": "Senegal Code général des impôts, CGI annoté, January 2025"
-    },
-    {
       "path": "ke/nssf_year4_notice_2026.ocr.txt",
       "url": null,
       "retrieved": "2026-11-05",
@@ -126,6 +117,43 @@
       "bytes": 200832,
       "kind": "OCR text of ng/pension_reform_act_2014_gazetted_copy.pdf made with liteparse (Tesseract, 300 dpi); may contain errors and dropped words, the PDF is the source",
       "describes": "Searchable text of the scanned document"
+    },
+    {
+      "path": "sn/cgi_annote_2025_10.pdf",
+      "url": "https://coinrh.sn/wp-content/uploads/2026/07/cgi-annote-octobre-2025_compress.pdf",
+      "retrieved": "2026-11-05",
+      "sha256": "cce5787330e35558cc1d8acfe3b5b26f53a897279568806956616c2dc240c8fa",
+      "bytes": 3129930,
+      "kind": "third-party host of the 'CGI annoté' (October 2025 edition, includes Loi 2025-17)",
+      "describes": "Senegal Code général des impôts, October 2025. Arts. 168, 173, 174, 182, 265-267 and 282 compared word for word with the January 2025 edition published by the DGID (https://www.dgid.sn/storage/docs/CGI-2025.pdf, the first edition read, since replaced in sources/ by this one): identical apart from a bracket character in art. 168."
+    },
+    {
+      "path": "sn/lfi_2026_jo7873.ocr.txt",
+      "url": "https://www.vie-publique.sn/docs/66e68dbe-8a18-4980-be2b-81f0ec0c3d69/JO-7873-du-08-janvier-2026-numero-special.pdf",
+      "retrieved": "2026-11-05",
+      "sha256": "c771fff317c3f606a04a5f27dba3799c8771c5d7ea07df30a0fd1652745c516d",
+      "bytes": 195124,
+      "kind": "OCR text (liteparse, Tesseract French) of Journal officiel n° 7873 of 8 January 2026, Loi n° 2025-19 of 22 December 2025 (LFI 2026); poor-quality scan, may contain errors",
+      "describes": "Read to see whether the LFI 2026 amends the income tax articles: its 25 articles are budget authorisations plus one export duty on cashew nuts; none amends the CGI income tax articles"
+    },
+    {
+      "path": "sn/JO-7873-du-08-janvier-2026-numero-special.pdf",
+      "url": "https://www.vie-publique.sn/docs/66e68dbe-8a18-4980-be2b-81f0ec0c3d69/JO-7873-du-08-janvier-2026-numero-special.pdf",
+      "retrieved": "2026-11-05",
+      "stored": false,
+      "sha256": "da84585837a1681072462bdeac515ad9d42d3c5279c86c39919c1a26e248d224",
+      "bytes": 18727125,
+      "kind": "original PDF not stored (18.7 MB); the hash identifies the file the OCR text was made from",
+      "describes": "Journal officiel n° 7873, 8 January 2026"
+    },
+    {
+      "path": "gm/sage_gambia_tax_changes_2025.html",
+      "url": "https://communityhub.sage.com/za/sage-payroll-professional/f/announcements/240041/gambia-tax-changes-effective-1-january-2025",
+      "retrieved": "2026-11-05",
+      "sha256": "f8f21ed122b2d408b189b99f2804cd92684673236943d47e49c87fbdee231701",
+      "bytes": 116038,
+      "kind": "payroll vendor announcement (secondary); the table is an image",
+      "describes": "States the 2025 Budget speech changed the Gambian income tax table effective 01 January 2025"
     }
   ]
 }

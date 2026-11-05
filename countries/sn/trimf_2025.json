@@ -4,9 +4,10 @@
   "kind": "levy",
   "currency": "XOF",
   "valid_from": "2025-01-01",
-  "source": "Senegal Code général des impôts, edition of January 2025, DGID (https://www.dgid.sn/storage/docs/CGI-2025.pdf, read 2026-11-05), arts. 275 and 282: withheld at source from salaries by residents, a fixed amount by annual gross income including benefits in cash and in kind: 0 to 599,999 900; 600,000 to 999,999 3,600; 1,000,000 to 1,999,999 4,800; 2,000,000 to 6,999,999 12,000; 7,000,000 to 11,999,999 18,000; 12,000,000 and over 36,000. This gives the amount for the year; how it is spread over the pay periods is not set in the articles read (the usual practice is twelve equal parts, not checked). Exemptions of art. 278 and the pensioner cases are not modelled.",
+  "source": "Senegal Code général des impôts, January 2025 edition on the DGID site (https://www.dgid.sn/storage/docs/CGI-2025.pdf) and the October 2025 edition saved in sources/, read 2026-11-05, arts. 275 and 282: withheld at source from salaries by residents, a fixed amount by annual gross income including benefits in cash and in kind: 0 to 599,999 900; 600,000 to 999,999 3,600; 1,000,000 to 1,999,999 4,800; 2,000,000 to 6,999,999 12,000; 7,000,000 to 11,999,999 18,000; 12,000,000 and over 36,000. This gives the amount for the year; how it is spread over the pay periods is not set in the articles read (the usual practice is twelve equal parts, not checked). Exemptions of art. 278 and the pensioner cases are not modelled. Currency check on 2026-11-05: the October 2025 consolidated edition (after Loi 2025-17 of 27 September 2025, JO 7853) has these articles word for word as the January 2025 edition; the 2026 Finance Law, Loi 2025-19 of 22 December 2025 (JO 7873, 8 January 2026), has 25 budget articles and does not amend them; the amending finance bill for 2026 (PLFR, projet de loi 40/2026) was rejected by the National Assembly on 3 November 2026 and in any case did not touch them. A later law not found by searching could still change them.",
   "source_files": [
-    "sn/dgid_cgi_2025_01.pdf"
+    "sn/cgi_annote_2025_10.pdf",
+    "sn/lfi_2026_jo7873.ocr.txt"
   ],
   "verified": true,
   "inputs": [

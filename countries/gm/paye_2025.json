@@ -4,10 +4,11 @@
   "kind": "income_tax",
   "currency": "GMD",
   "valid_from": "2025-01-01",
-  "source": "Gambia Revenue Authority, Employment Income Tax (PAYE) Brochure (https://gra.gm/download-file/8d0ccc58-d217-11ed-9b31-029254d29bb1, PDF created 18 March 2026, read 2026-11-05): annual bands 0% to D36,000, 5% to D46,000, 10% to D56,000, 15% to D66,000, 20% to D76,000, 25% above; 'No deductions are allowed', so the rate applies to total employment income. The brochure's own text says 'as at January 2018', though it shows the D36,000 threshold that law-firm and payroll summaries date from 1 January 2025 (an older GRA brochure, https://gra.gm/download-file/8d0cd78a-d217-11ed-9b31-029254d29bb1, shows D24,000, 5% to D34,000 and so on, to 25% above D64,000); the 2025 start date is from those summaries, not from a GRA notice or the Finance Act, which were not read. GRA's worked example for D50,000 a month gives D11,333.34 (the sum of lines each rounded); this pack rounds once and gives 11,333.33.",
+  "source": "Gambia Revenue Authority, Employment Income Tax (PAYE) Brochure (https://gra.gm/download-file/8d0ccc58-d217-11ed-9b31-029254d29bb1, PDF created 18 March 2026, read 2026-11-05): annual bands 0% to D36,000, 5% to D46,000, 10% to D56,000, 15% to D66,000, 20% to D76,000, 25% above; 'No deductions are allowed', so the rate applies to total employment income. The brochure's own text says 'as at January 2018', though it shows the D36,000 threshold that law-firm and payroll summaries date from 1 January 2025 (an older GRA brochure, https://gra.gm/download-file/8d0cd78a-d217-11ed-9b31-029254d29bb1, shows D24,000, 5% to D34,000 and so on, to 25% above D64,000); the 2025 start date is from those summaries, not from a GRA notice or the Finance Act, which were not read. GRA's worked example for D50,000 a month gives D11,333.34 (the sum of lines each rounded); this pack rounds once and gives 11,333.33. Corroboration, 2026-11-05: a payroll vendor (Sage) says the 2025 Budget speech changed the income tax table effective 01 January 2025 (sources/gm/sage_gambia_tax_changes_2025.html; the table is an image); a Payspace summary of the proposed 2025 budget lists the same bands (0% to D36,000, 5%, 10%, 15%, 20%, 25% above D76,000) and its 2026 budget summary says no payroll changes are proposed (those two pages render by script and could not be saved). The Finance Acts were not found.",
   "source_files": [
     "gm/gra_paye_brochure.pdf",
-    "gm/gra_personal_income_tax_brochure_2023.pdf"
+    "gm/gra_personal_income_tax_brochure_2023.pdf",
+    "gm/sage_gambia_tax_changes_2025.html"
   ],
   "verified": true,
   "inputs": [
