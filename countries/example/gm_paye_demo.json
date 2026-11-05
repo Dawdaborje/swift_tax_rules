@@ -1,0 +1,22 @@
+{
+  "id": "gm.paye.demo",
+  "country": "gm",
+  "kind": "income_tax",
+  "currency": "GMD",
+  "valid_from": "2025-01-01",
+  "valid_to": null,
+  "source": "DEMO: invented figures for testing, not the law",
+  "verified": false,
+  "inputs": ["taxable", "periods_per_year"],
+  "constants": {
+    "brackets": [[24000, 0], [48000, 0.05], [72000, 0.10], [96000, 0.15], [120000, 0.20], [null, 0.25]]
+  },
+  "rounding": { "digits": 2, "mode": "half_up" },
+  "tests": [
+    { "name": "inside the free band", "inputs": { "taxable": 1500, "periods_per_year": 12 }, "expect": "0.00" },
+    { "name": "second band reached", "inputs": { "taxable": 5000, "periods_per_year": 12 }, "expect": "200.00" },
+    { "name": "fifth band reached", "inputs": { "taxable": 10000, "periods_per_year": 12 }, "expect": "1000.00" },
+    { "name": "top band", "inputs": { "taxable": 12000, "periods_per_year": 12 }, "expect": "1500.00" },
+    { "name": "exactly on a limit", "inputs": { "taxable": 2000, "periods_per_year": 12 }, "expect": "0.00" }
+  ]
+}

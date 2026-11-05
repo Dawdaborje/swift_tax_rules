@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Swift tax rule pack",
+  "description": "The description that sits beside a rule's .cel expression. The expression reads `inputs` and `constants` by name and gives the amount for one pay period.",
+  "type": "object",
+  "required": ["id", "country", "kind", "currency", "valid_from", "source", "inputs", "tests"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z]{2}\\.[a-z0-9_]+\\.[a-z0-9_]+$", "description": "<country>.<rule>.<edition>, e.g. gm.paye.2025" },
+    "country": { "type": "string", "pattern": "^[a-z]{2}$" },
+    "kind": { "enum": ["income_tax", "social_security", "levy", "vat", "other"] },
+    "currency": { "type": "string" },
+    "valid_from": { "type": "string", "format": "date" },
+    "valid_to": { "type": ["string", "null"], "format": "date" },
+    "source": { "type": "string", "description": "The law, notice or link the figures come from." },
+    "verified": { "type": "boolean", "description": "True only once someone has checked every figure against `source`." },
+    "inputs": { "type": "array", "items": { "type": "string" }, "description": "Names the expression reads besides the constants." },
+    "constants": { "type": "object", "description": "Tables and rates. A bracket table is [[upper, rate], ...] ascending, the last upper null." },
+    "rounding": {
+      "type": "object",
+      "properties": { "digits": { "type": "integer", "minimum": 0, "maximum": 8 }, "mode": { "enum": ["half_up", "half_even", "down", "up"] } }
+    },
+    "tests": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["name", "inputs", "expect"],
+        "properties": { "name": { "type": "string" }, "inputs": { "type": "object" }, "expect": { "type": "string" } }
+      }
+    }
+  }
+}

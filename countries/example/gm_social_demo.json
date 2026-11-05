@@ -1,0 +1,18 @@
+{
+  "id": "gm.social.demo",
+  "country": "gm",
+  "kind": "social_security",
+  "currency": "GMD",
+  "valid_from": "2025-01-01",
+  "valid_to": null,
+  "source": "DEMO: invented figures for testing, not the law",
+  "verified": false,
+  "inputs": ["pensionable"],
+  "constants": { "rate": 5, "ceiling": 30000 },
+  "rounding": { "digits": 2, "mode": "half_up" },
+  "tests": [
+    { "name": "below the ceiling", "inputs": { "pensionable": 10000 }, "expect": "500.00" },
+    { "name": "at the ceiling", "inputs": { "pensionable": 30000 }, "expect": "1500.00" },
+    { "name": "above the ceiling is capped", "inputs": { "pensionable": 50000 }, "expect": "1500.00" }
+  ]
+}

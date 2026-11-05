@@ -1,0 +1,21 @@
+{
+  "id": "xx.paye.demo",
+  "country": "xx",
+  "kind": "income_tax",
+  "currency": "GMD",
+  "valid_from": "2025-01-01",
+  "valid_to": null,
+  "source": "illustrative only: not a real schedule",
+  "verified": false,
+  "inputs": ["taxable", "periods_per_year"],
+  "constants": {
+    "brackets": [[288000, 0], [576000, 0.10], [null, 0.20]]
+  },
+  "rounding": { "digits": 2, "mode": "half_up" },
+  "tests": [
+    { "name": "monthly, top band reached", "inputs": { "taxable": 59500, "periods_per_year": 12 }, "expect": "4700.00" },
+    { "name": "monthly, inside the free band", "inputs": { "taxable": 20000, "periods_per_year": 12 }, "expect": "0.00" },
+    { "name": "exactly on a limit", "inputs": { "taxable": 24000, "periods_per_year": 12 }, "expect": "0.00" },
+    { "name": "weekly", "inputs": { "taxable": 1500, "periods_per_year": 52 }, "expect": "0.00" }
+  ]
+}

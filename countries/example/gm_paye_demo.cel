@@ -1,0 +1,4 @@
+// DEMO ONLY. Income tax for one monthly pay period, by progressive yearly bands.
+// The bands and rates in the description file are INVENTED to test payroll; they are not the law of The Gambia
+// or of anywhere. `taxable` is the pay after pre-tax deductions for the period.
+bracket(taxable * periods_per_year, brackets) / periods_per_year

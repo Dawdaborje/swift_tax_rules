@@ -1,0 +1,3 @@
+// DEMO ONLY. Employee social security: a percentage of pensionable pay up to a ceiling.
+// The rate and ceiling are INVENTED to test payroll; they are not the law of The Gambia or of anywhere.
+pct(min(pensionable, ceiling), rate)
