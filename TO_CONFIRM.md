@@ -32,7 +32,7 @@ Nothing was copied from them.
 | `hk.salaries_tax.2024` | IRD | Rates and the standard-rate cap; allowances belong off income, not off tax as modelled. |
 
 | `gm.sshfc_employee.2025` | SSHFC, SSHFC Act | 5% employee, 10% employer of basic salary from payroll guides only; housing, health and injury-fund contributions disagree between sources. |
-| `sn` social security | IPRES and Caisse de Sécurité Sociale | No pack yet: IPRES general scheme (employee 5.6%, employer 8.4%) and the family-benefit contribution (employer 7%, ceiling 63,000 a month) are in secondary sources only, and the IPRES ceiling is disputed (256,000 or 432,000 a month); the complementary scheme for managers is also not written. |
+| `sn.ipres_*`, `sn.css_*` | IPRES (ipres.sn, secusociale.ipres.sn), Caisse de Sécurité Sociale, the decrees | Written 2026-11-05 from CLEISS (a French public body) 'as at 1 January 2026' only, because the Senegalese sites could not be reached. Need the official notice or decree for: general scheme 5.6% employee / 8.4% employer with a 432,000 monthly ceiling (the IPRES guide showed 360,000 from 2017); managers' scheme 2.4% / 3.6% between 432,000 and 1,296,000; CSS family benefits 7% up to 63,000; work-injury 1/3/5% up to 63,000; the SMIG floor; who counts as a cadre. Not written: health insurance (IPM, 2% to 7.5% each side, ceiling 250,000 per CLEISS, rate set by the institution). |
 | `sn.ir.2025` | DGID | The reading of the art. 174 reduction (rate x tax kept between minimum and maximum); whether monthly withholding uses the annual computation divided by 12; a monthly withholding table, if the DGID publishes one. |
 
 ## Countries Odoo has that have no pack yet

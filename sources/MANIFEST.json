@@ -154,6 +154,15 @@
       "bytes": 116038,
       "kind": "payroll vendor announcement (secondary); the table is an image",
       "describes": "States the 2025 Budget speech changed the Gambian income tax table effective 01 January 2025"
+    },
+    {
+      "path": "sn/cleiss_senegal_cotisations.html",
+      "url": "https://www.cleiss.fr/docs/cotisations/senegal.html",
+      "retrieved": "2026-11-05",
+      "sha256": "40c7744d67bb1c4ec2b5ca5f32febbfe6272b732b32dc2d308f4ce9a559d3e36",
+      "bytes": 9928,
+      "kind": "secondary: French public body's summary of Senegalese contributions as at 1 January 2026",
+      "describes": "IPRES, CSS and health-insurance rates and ceilings; not the Senegalese authority"
     }
   ]
 }

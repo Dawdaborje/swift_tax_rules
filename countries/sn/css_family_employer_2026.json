@@ -1,0 +1,37 @@
+{
+  "id": "sn.css_family.2026",
+  "country": "sn",
+  "kind": "social_security",
+  "currency": "XOF",
+  "valid_from": "2026-01-01",
+  "source": "UNCONFIRMED. CLEISS (Centre des liaisons européennes et internationales de sécurité sociale, a French public body), 'Les cotisations au Sénégal', table 'Cotisations au 1er janvier 2026' (https://www.cleiss.fr/docs/cotisations/senegal.html, saved in sources/sn/cleiss_senegal_cotisations.html, read 2026-11-05). It is a foreign body's summary, not the Senegalese authority, and no decree or IPRES/CSS notice was read: ipres.sn, secusociale.ipres.sn and the CSS site could not be reached from here. Caisse de Sécurité Sociale, prestations familiales: 7% of gross monthly pay up to a ceiling of 63,000, paid entirely by the employer. Not modelled: the floor, since the base cannot be below the SMIG (CLEISS gives 371 FCFA gross per hour for the 40-hour week since 1 July 2023, 237 for agriculture).",
+  "source_files": [
+    "sn/cleiss_senegal_cotisations.html"
+  ],
+  "verified": false,
+  "inputs": [
+    "gross"
+  ],
+  "constants": {
+    "rate": 7,
+    "ceiling": 63000
+  },
+  "tests": [
+    {
+      "name": "below the ceiling: 50000",
+      "inputs": {
+        "gross": 50000
+      },
+      "expect": "3500.00",
+      "origin": "calculated"
+    },
+    {
+      "name": "above the ceiling: 500000",
+      "inputs": {
+        "gross": 500000
+      },
+      "expect": "4410.00",
+      "origin": "calculated"
+    }
+  ]
+}

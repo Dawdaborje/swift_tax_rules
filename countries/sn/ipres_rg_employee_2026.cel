@@ -1,0 +1,2 @@
+// Senegal IPRES general scheme, one monthly period: a share of gross pay up to the ceiling.
+pct(min(gross, ceiling), rate)

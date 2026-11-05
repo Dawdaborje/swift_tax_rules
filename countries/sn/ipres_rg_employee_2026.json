@@ -1,0 +1,45 @@
+{
+  "id": "sn.ipres_rg_employee.2026",
+  "country": "sn",
+  "kind": "social_security",
+  "currency": "XOF",
+  "valid_from": "2026-01-01",
+  "source": "UNCONFIRMED. CLEISS (Centre des liaisons européennes et internationales de sécurité sociale, a French public body), 'Les cotisations au Sénégal', table 'Cotisations au 1er janvier 2026' (https://www.cleiss.fr/docs/cotisations/senegal.html, saved in sources/sn/cleiss_senegal_cotisations.html, read 2026-11-05). It is a foreign body's summary, not the Senegalese authority, and no decree or IPRES/CSS notice was read: ipres.sn, secusociale.ipres.sn and the CSS site could not be reached from here. The IPRES employer guide (seen only as a search snippet) gave 360,000 and 1,080,000 from 1 January 2017; the CLEISS figures are exactly 20% higher, so the ceilings were raised at some date not found. Other guides still show 256,000 or 416,667, which look out of date. The base is gross pay. IPRES general scheme (employee 5.6%, total 14%) on gross monthly pay up to a ceiling of 432,000. For employees the 30% abatement of art. 182 of the CGI stands for these contributions, so they are not deducted again for income tax.",
+  "source_files": [
+    "sn/cleiss_senegal_cotisations.html"
+  ],
+  "verified": false,
+  "inputs": [
+    "gross"
+  ],
+  "constants": {
+    "rate": 5.6,
+    "ceiling": 432000
+  },
+  "tests": [
+    {
+      "name": "below the ceiling: 300000",
+      "inputs": {
+        "gross": 300000
+      },
+      "expect": "16800.00",
+      "origin": "calculated"
+    },
+    {
+      "name": "at the ceiling: 432000",
+      "inputs": {
+        "gross": 432000
+      },
+      "expect": "24192.00",
+      "origin": "calculated"
+    },
+    {
+      "name": "above the ceiling is capped: 1000000",
+      "inputs": {
+        "gross": 1000000
+      },
+      "expect": "24192.00",
+      "origin": "calculated"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "sn.css_work_injury.2026",
+  "country": "sn",
+  "kind": "social_security",
+  "currency": "XOF",
+  "valid_from": "2026-01-01",
+  "source": "UNCONFIRMED. CLEISS (Centre des liaisons européennes et internationales de sécurité sociale, a French public body), 'Les cotisations au Sénégal', table 'Cotisations au 1er janvier 2026' (https://www.cleiss.fr/docs/cotisations/senegal.html, saved in sources/sn/cleiss_senegal_cotisations.html, read 2026-11-05). It is a foreign body's summary, not the Senegalese authority, and no decree or IPRES/CSS notice was read: ipres.sn, secusociale.ipres.sn and the CSS site could not be reached from here. Caisse de Sécurité Sociale, work accidents and occupational diseases: 1%, 3% or 5% of gross monthly pay up to a ceiling of 63,000, paid entirely by the employer; the rate depends on the employer's activity and is assigned by the CSS, so it is an input.",
+  "source_files": [
+    "sn/cleiss_senegal_cotisations.html"
+  ],
+  "verified": false,
+  "inputs": [
+    "gross",
+    "risk_rate"
+  ],
+  "constants": {
+    "ceiling": 63000
+  },
+  "tests": [
+    {
+      "name": "risk 1%, pay 500000",
+      "inputs": {
+        "gross": 500000,
+        "risk_rate": 1
+      },
+      "expect": "630.00",
+      "origin": "calculated"
+    },
+    {
+      "name": "risk 5%, pay 40000",
+      "inputs": {
+        "gross": 40000,
+        "risk_rate": 5
+      },
+      "expect": "2000.00",
+      "origin": "calculated"
+    }
+  ]
+}

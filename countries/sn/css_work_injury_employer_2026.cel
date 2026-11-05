@@ -1,0 +1,2 @@
+// Senegal CSS work injury, employer, one monthly period: the employer's risk rate on gross pay up to the ceiling.
+pct(min(gross, ceiling), risk_rate)

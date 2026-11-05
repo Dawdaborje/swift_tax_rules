@@ -1,0 +1,46 @@
+{
+  "id": "sn.ipres_rc_employer.2026",
+  "country": "sn",
+  "kind": "social_security",
+  "currency": "XOF",
+  "valid_from": "2026-01-01",
+  "source": "UNCONFIRMED. CLEISS (Centre des liaisons européennes et internationales de sécurité sociale, a French public body), 'Les cotisations au Sénégal', table 'Cotisations au 1er janvier 2026' (https://www.cleiss.fr/docs/cotisations/senegal.html, saved in sources/sn/cleiss_senegal_cotisations.html, read 2026-11-05). It is a foreign body's summary, not the Senegalese authority, and no decree or IPRES/CSS notice was read: ipres.sn, secusociale.ipres.sn and the CSS site could not be reached from here. The IPRES employer guide (seen only as a search snippet) gave 360,000 and 1,080,000 from 1 January 2017; the CLEISS figures are exactly 20% higher, so the ceilings were raised at some date not found. Other guides still show 256,000 or 416,667, which look out of date. The base is gross pay. IPRES complementary scheme for managers (cadres) (employer 3.6%, total 6%) on the part of gross monthly pay above 432,000 and up to 1,296,000. Apply it only to employees who are cadres (the structure decides); who counts as a cadre was not checked.",
+  "source_files": [
+    "sn/cleiss_senegal_cotisations.html"
+  ],
+  "verified": false,
+  "inputs": [
+    "gross"
+  ],
+  "constants": {
+    "rate": 3.6,
+    "lower": 432000,
+    "upper": 1296000
+  },
+  "tests": [
+    {
+      "name": "below the lower limit: 400000",
+      "inputs": {
+        "gross": 400000
+      },
+      "expect": "0.00",
+      "origin": "calculated"
+    },
+    {
+      "name": "inside: 1000000",
+      "inputs": {
+        "gross": 1000000
+      },
+      "expect": "20448.00",
+      "origin": "calculated"
+    },
+    {
+      "name": "above the upper limit: 2000000",
+      "inputs": {
+        "gross": 2000000
+      },
+      "expect": "31104.00",
+      "origin": "calculated"
+    }
+  ]
+}

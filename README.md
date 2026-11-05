@@ -45,7 +45,7 @@ levy), Ghana (gh: PAYE 2026), Nigeria (ng: PAYE, pension), Uganda (ug: PAYE 2026
 Senegal (sn: income tax, TRIMF, employer contribution).
 
 Packs written but **unverified**; see [TO_CONFIRM.md](TO_CONFIRM.md) before using any of them: Ghana SSNIT,
-Gambia SSHFC, Bangladesh (bd), Egypt (eg), Hong Kong (hk), Indonesia (id), India (in), Morocco (ma),
+Gambia SSHFC, Senegal IPRES and CSS (written from a secondary source), Bangladesh (bd), Egypt (eg), Hong Kong (hk), Indonesia (id), India (in), Morocco (ma),
 Malaysia (my), Nigeria NHF, Pakistan (pk), Turkey (tr), Uganda NSSF.
 
 `example/` holds demonstration packs with illustrative figures, including `gm.paye.demo` and

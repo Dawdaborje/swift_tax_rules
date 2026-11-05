@@ -1,0 +1,2 @@
+// Senegal IPRES complementary scheme for managers, one monthly period: a share of the pay between the two limits.
+pct(max(min(gross, upper) - lower, 0), rate)
