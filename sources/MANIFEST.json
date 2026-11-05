@@ -108,6 +108,24 @@
       "bytes": 8100593,
       "kind": "official publication",
       "describes": "Senegal Code général des impôts, CGI annoté, January 2025"
+    },
+    {
+      "path": "ke/nssf_year4_notice_2026.ocr.txt",
+      "url": null,
+      "retrieved": "2026-11-05",
+      "sha256": "5cac21525f7ba335f9069dea228c4082d9ccb2c76d8113cb3be8f9cee9633a66",
+      "bytes": 3148,
+      "kind": "OCR text of ke/nssf_year4_notice_2026.pdf made with liteparse (Tesseract, 300 dpi); may contain errors and dropped words, the PDF is the source",
+      "describes": "Searchable text of the scanned document"
+    },
+    {
+      "path": "ng/pension_reform_act_2014_gazetted_copy.ocr.txt",
+      "url": null,
+      "retrieved": "2026-11-05",
+      "sha256": "f852a30f13d134aebb4a8b7d1372e2dadc8d45eeeb188a170ddf4f0e9e589a44",
+      "bytes": 200832,
+      "kind": "OCR text of ng/pension_reform_act_2014_gazetted_copy.pdf made with liteparse (Tesseract, 300 dpi); may contain errors and dropped words, the PDF is the source",
+      "describes": "Searchable text of the scanned document"
     }
   ]
 }
