@@ -1,0 +1,21 @@
+{
+  "id": "ug.paye.2026",
+  "country": "ug",
+  "kind": "income_tax",
+  "currency": "UGX",
+  "valid_from": "2026-07-01",
+  "source": "Uganda Revenue Authority, PAYE rates for resident taxpayers (https://ura.go.ug/en/domestic-taxes/paye-rates/), read 2026-11-05, after the Income Tax (Amendment) Act 2026. Monthly: nil to 335,000; 20% of the excess over 335,000 to 410,000; 15,000 + 25% of the excess over 410,000 to 485,000; 33,750 + 30% of the excess over 485,000 to 10,000,000; above 10,000,000 an extra 10% of the excess over 10,000,000 (a marginal 40%). Written here as annual bands (12 times the monthly ones). Commencement 1 July 2026 is from a URA notice and law-firm and PwC summaries (e.g. https://www.kaa.co.ug/kaa-tax-alert-income-tax-amendment-act-2026/); the gazetted Act was not read. Not modelled: non-residents (the URA page shows a different table) and employees with more than one employer, who are taxed at a flat 30% of total employment income.",
+  "verified": true,
+  "inputs": ["taxable", "periods_per_year"],
+  "constants": {
+    "brackets": [[4020000, 0], [4920000, 0.20], [5820000, 0.25], [120000000, 0.30], [null, 0.40]],
+    "relief_annual": 0
+  },
+  "tests": [
+    { "name": "monthly 300000: below the threshold", "inputs": { "taxable": 300000, "periods_per_year": 12 }, "expect": "0.00" },
+    { "name": "monthly 400000: 20% of 65000", "inputs": { "taxable": 400000, "periods_per_year": 12 }, "expect": "13000.00" },
+    { "name": "monthly 450000: 15000 + 25% of 40000", "inputs": { "taxable": 450000, "periods_per_year": 12 }, "expect": "25000.00" },
+    { "name": "monthly 1000000: 33750 + 30% of 515000", "inputs": { "taxable": 1000000, "periods_per_year": 12 }, "expect": "188250.00" },
+    { "name": "monthly 15000000: 33750 + 30% of 14515000 + 10% of 5000000", "inputs": { "taxable": 15000000, "periods_per_year": 12 }, "expect": "4888250.00" }
+  ]
+}

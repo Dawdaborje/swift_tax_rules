@@ -4,7 +4,7 @@
   "kind": "social_security",
   "currency": "UGX",
   "valid_from": "2023-07-01",
-  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: NSSF Uganda employee contribution 5% of gross (https://www.nssfug.org). Employer pays 10%.",
+  "source": "UNCONFIRMED. NSSF Uganda's own 2024 sustainability report (https://issuu.com/nssfuganda/docs/nssf-esg-2024-final, seen as a search snippet 2026-11-05) says employees pay 5% and employers 10% of gross monthly salary, but nssfug.org could not be read and the NSSF Act was not. Whether a ceiling applies is unresolved (one vendor says 1,000,000 a month, another none). Rate as originally written: NSSF Uganda employee contribution 5% of gross (https://www.nssfug.org). Employer pays 10%.",
   "verified": false,
   "inputs": [
     "gross"

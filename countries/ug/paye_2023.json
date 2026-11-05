@@ -4,7 +4,8 @@
   "kind": "income_tax",
   "currency": "UGX",
   "valid_from": "2023-07-01",
-  "source": "UNCONFIRMED, written from recollection and not yet checked against the source: Uganda Revenue Authority PAYE bands (https://www.ura.go.ug). Monthly bands: first 235,000 free, next 100,000 at 10%, to 410,000 at 20%, then 30%; an extra 10% above 10,000,000 a month is NOT modelled (needs a second band set).",
+  "valid_to": "2026-06-30",
+  "source": "UNCONFIRMED (superseded by ug.paye.2026 from 2026-07-01; the Income Tax (Amendment) Act 2026 raised the threshold to 335,000 a month), written from recollection and not yet checked against the source: Uganda Revenue Authority PAYE bands (https://www.ura.go.ug). Monthly bands: first 235,000 free, next 100,000 at 10%, to 410,000 at 20%, then 30%; an extra 10% above 10,000,000 a month is NOT modelled (needs a second band set).",
   "verified": false,
   "inputs": [
     "taxable",
